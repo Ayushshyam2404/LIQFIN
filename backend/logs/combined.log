@@ -1,0 +1,576 @@
+[2026-06-07T22:37:59.490Z] [INFO] Sentry DSN not provided. Error tracker running in Log-only mode.
+[2026-06-07T22:37:59.514Z] [INFO] Sentry DSN not provided. Error tracker running in Log-only mode.
+[2026-06-07T22:38:03.540Z] [INFO] Sentry DSN not provided. Error tracker running in Log-only mode.
+[2026-06-07T22:38:03.559Z] [INFO] Sentry DSN not provided. Error tracker running in Log-only mode.
+[2026-06-07T22:38:04.282Z] [INFO] [EmailSync] Starting background email sync service (2-minute intervals)...
+[2026-06-07T22:38:04.282Z] [INFO] =============================================
+[2026-06-07T22:38:04.282Z] [INFO]   LIQIFIN Backend running in development mode
+[2026-06-07T22:38:04.282Z] [INFO]   Access Local API: http://localhost:5001
+[2026-06-07T22:38:04.282Z] [INFO] =============================================
+[2026-06-07T22:38:04.287Z] [INFO] [EmailSync] Starting background email sync service (2-minute intervals)...
+[2026-06-07T22:38:04.288Z] [ERROR] CRITICAL: Uncaught Exception detected! Server shutting down... | Error: listen EADDRINUSE: address already in use :::5001
+Stack: Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2008:16)
+    at listenInCluster (node:net:2065:12)
+    at Server.listen (node:net:2170:7)
+    at app.listen (/Users/caliber/private/exp-trc/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/caliber/private/exp-trc/backend/src/index.ts:43:22)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+[2026-06-07T22:38:09.544Z] [INFO] [EmailSync] Starting background email sync service (2-minute intervals)...
+[2026-06-07T22:38:09.544Z] [INFO] =============================================
+[2026-06-07T22:38:09.545Z] [INFO]   LIQIFIN Backend running in development mode
+[2026-06-07T22:38:09.545Z] [INFO]   Access Local API: http://localhost:5001
+[2026-06-07T22:38:09.545Z] [INFO] =============================================
+[2026-06-07T22:38:09.551Z] [INFO] [EmailSync] Starting background email sync service (2-minute intervals)...
+[2026-06-07T22:38:09.553Z] [ERROR] CRITICAL: Uncaught Exception detected! Server shutting down... | Error: listen EADDRINUSE: address already in use :::5001
+Stack: Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2008:16)
+    at listenInCluster (node:net:2065:12)
+    at Server.listen (node:net:2170:7)
+    at app.listen (/Users/caliber/private/exp-trc/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/caliber/private/exp-trc/backend/src/index.ts:43:22)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+[2026-06-07T22:38:22.875Z] [INFO] [EmailSync] Starting background email sync service (2-minute intervals)...
+[2026-06-07T22:38:22.875Z] [INFO] =============================================
+[2026-06-07T22:38:22.875Z] [INFO]   LIQIFIN Backend running in development mode
+[2026-06-07T22:38:22.875Z] [INFO]   Access Local API: http://localhost:5001
+[2026-06-07T22:38:22.876Z] [INFO] =============================================
+[2026-06-07T22:38:22.889Z] [INFO] [EmailSync] Starting background email sync service (2-minute intervals)...
+[2026-06-07T22:38:22.890Z] [ERROR] CRITICAL: Uncaught Exception detected! Server shutting down... | Error: listen EADDRINUSE: address already in use :::5001
+Stack: Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2008:16)
+    at listenInCluster (node:net:2065:12)
+    at Server.listen (node:net:2170:7)
+    at app.listen (/Users/caliber/private/exp-trc/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/caliber/private/exp-trc/backend/src/index.ts:43:22)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+[2026-06-07T22:40:31.685Z] [INFO] [EmailSync] Starting background email sync service (2-minute intervals)...
+[2026-06-07T22:40:31.685Z] [INFO] =============================================
+[2026-06-07T22:40:31.685Z] [INFO]   LIQIFIN Backend running in development mode
+[2026-06-07T22:40:31.686Z] [INFO]   Access Local API: http://localhost:5001
+[2026-06-07T22:40:31.686Z] [INFO] =============================================
+[2026-06-07T22:40:31.708Z] [INFO] [EmailSync] Starting background email sync service (2-minute intervals)...
+[2026-06-07T22:40:31.709Z] [ERROR] CRITICAL: Uncaught Exception detected! Server shutting down... | Error: listen EADDRINUSE: address already in use :::5001
+Stack: Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2008:16)
+    at listenInCluster (node:net:2065:12)
+    at Server.listen (node:net:2170:7)
+    at app.listen (/Users/caliber/private/exp-trc/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/caliber/private/exp-trc/backend/src/index.ts:43:22)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+[2026-06-07T22:47:07.173Z] [INFO] [EmailSync] Starting background email sync service (2-minute intervals)...
+[2026-06-07T22:47:07.174Z] [INFO] =============================================
+[2026-06-07T22:47:07.174Z] [INFO]   LIQIFIN Backend running in development mode
+[2026-06-07T22:47:07.174Z] [INFO]   Access Local API: http://localhost:5001
+[2026-06-07T22:47:07.174Z] [INFO] =============================================
+[2026-06-07T22:47:07.178Z] [INFO] [EmailSync] Starting background email sync service (2-minute intervals)...
+[2026-06-07T22:47:07.179Z] [ERROR] CRITICAL: Uncaught Exception detected! Server shutting down... | Error: listen EADDRINUSE: address already in use :::5001
+Stack: Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2008:16)
+    at listenInCluster (node:net:2065:12)
+    at Server.listen (node:net:2170:7)
+    at app.listen (/Users/caliber/private/exp-trc/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/caliber/private/exp-trc/backend/src/index.ts:43:22)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+[2026-06-07T23:19:11.788Z] [INFO] [EmailSync] Starting background email sync service (2-minute intervals)...
+[2026-06-07T23:19:11.789Z] [INFO] =============================================
+[2026-06-07T23:19:11.790Z] [INFO]   LIQIFIN Backend running in development mode
+[2026-06-07T23:19:11.790Z] [INFO]   Access Local API: http://localhost:5001
+[2026-06-07T23:19:11.790Z] [INFO] =============================================
+[2026-06-07T23:19:11.804Z] [INFO] [EmailSync] Starting background email sync service (2-minute intervals)...
+[2026-06-07T23:19:11.805Z] [ERROR] CRITICAL: Uncaught Exception detected! Server shutting down... | Error: listen EADDRINUSE: address already in use :::5001
+Stack: Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2008:16)
+    at listenInCluster (node:net:2065:12)
+    at Server.listen (node:net:2170:7)
+    at app.listen (/Users/caliber/private/exp-trc/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/caliber/private/exp-trc/backend/src/index.ts:43:22)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+[2026-06-07T23:19:13.244Z] [INFO] [EmailSync] Starting background email sync service (2-minute intervals)...
+[2026-06-07T23:19:13.244Z] [INFO] =============================================
+[2026-06-07T23:19:13.244Z] [INFO]   LIQIFIN Backend running in development mode
+[2026-06-07T23:19:13.244Z] [INFO]   Access Local API: http://localhost:5001
+[2026-06-07T23:19:13.244Z] [INFO] =============================================
+[2026-06-07T23:19:13.253Z] [INFO] [EmailSync] Starting background email sync service (2-minute intervals)...
+[2026-06-07T23:19:13.254Z] [ERROR] CRITICAL: Uncaught Exception detected! Server shutting down... | Error: listen EADDRINUSE: address already in use :::5001
+Stack: Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2008:16)
+    at listenInCluster (node:net:2065:12)
+    at Server.listen (node:net:2170:7)
+    at app.listen (/Users/caliber/private/exp-trc/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/caliber/private/exp-trc/backend/src/index.ts:43:22)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+[2026-06-07T23:19:20.272Z] [INFO] [EmailSync] Starting background email sync service (2-minute intervals)...
+[2026-06-07T23:19:20.274Z] [INFO] =============================================
+[2026-06-07T23:19:20.274Z] [INFO]   LIQIFIN Backend running in development mode
+[2026-06-07T23:19:20.274Z] [INFO]   Access Local API: http://localhost:5001
+[2026-06-07T23:19:20.274Z] [INFO] =============================================
+[2026-06-07T23:19:20.294Z] [INFO] [EmailSync] Starting background email sync service (2-minute intervals)...
+[2026-06-07T23:19:20.298Z] [ERROR] CRITICAL: Uncaught Exception detected! Server shutting down... | Error: listen EADDRINUSE: address already in use :::5001
+Stack: Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2008:16)
+    at listenInCluster (node:net:2065:12)
+    at Server.listen (node:net:2170:7)
+    at app.listen (/Users/caliber/private/exp-trc/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/caliber/private/exp-trc/backend/src/index.ts:43:22)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+[2026-06-07T23:19:24.661Z] [INFO] [EmailSync] Starting background email sync service (2-minute intervals)...
+[2026-06-07T23:19:24.662Z] [INFO] =============================================
+[2026-06-07T23:19:24.662Z] [INFO]   LIQIFIN Backend running in development mode
+[2026-06-07T23:19:24.662Z] [INFO]   Access Local API: http://localhost:5001
+[2026-06-07T23:19:24.662Z] [INFO] =============================================
+[2026-06-07T23:19:24.708Z] [INFO] [EmailSync] Starting background email sync service (2-minute intervals)...
+[2026-06-07T23:19:24.709Z] [ERROR] CRITICAL: Uncaught Exception detected! Server shutting down... | Error: listen EADDRINUSE: address already in use :::5001
+Stack: Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2008:16)
+    at listenInCluster (node:net:2065:12)
+    at Server.listen (node:net:2170:7)
+    at app.listen (/Users/caliber/private/exp-trc/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/caliber/private/exp-trc/backend/src/index.ts:43:22)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+[2026-06-07T23:19:27.999Z] [INFO] [EmailSync] Starting background email sync service (2-minute intervals)...
+[2026-06-07T23:19:27.999Z] [INFO] [EmailSync] Starting background email sync service (2-minute intervals)...
+[2026-06-07T23:19:27.999Z] [INFO] =============================================
+[2026-06-07T23:19:28.000Z] [INFO]   LIQIFIN Backend running in development mode
+[2026-06-07T23:19:28.000Z] [INFO]   Access Local API: http://localhost:5001
+[2026-06-07T23:19:28.000Z] [INFO] =============================================
+[2026-06-07T23:19:28.000Z] [ERROR] CRITICAL: Uncaught Exception detected! Server shutting down... | Error: listen EADDRINUSE: address already in use :::5001
+Stack: Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2008:16)
+    at listenInCluster (node:net:2065:12)
+    at Server.listen (node:net:2170:7)
+    at app.listen (/Users/caliber/private/exp-trc/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/caliber/private/exp-trc/backend/src/index.ts:43:22)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+[2026-06-07T23:19:36.448Z] [WARN] VAPID keys not configured in environment variables. Generating temporary VAPID keys...
+[2026-06-07T23:19:36.474Z] [WARN] VAPID keys not configured in environment variables. Generating temporary VAPID keys...
+[2026-06-07T23:19:36.494Z] [INFO] [EmailSync] Starting background email sync service (2-minute intervals)...
+[2026-06-07T23:19:36.495Z] [INFO] =============================================
+[2026-06-07T23:19:36.495Z] [INFO]   LIQIFIN Backend running in development mode
+[2026-06-07T23:19:36.495Z] [INFO]   Access Local API: http://localhost:5001
+[2026-06-07T23:19:36.495Z] [INFO] =============================================
+[2026-06-07T23:19:36.518Z] [INFO] [EmailSync] Starting background email sync service (2-minute intervals)...
+[2026-06-07T23:19:36.519Z] [ERROR] CRITICAL: Uncaught Exception detected! Server shutting down... | Error: listen EADDRINUSE: address already in use :::5001
+Stack: Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2008:16)
+    at listenInCluster (node:net:2065:12)
+    at Server.listen (node:net:2170:7)
+    at app.listen (/Users/caliber/private/exp-trc/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/caliber/private/exp-trc/backend/src/index.ts:43:22)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+[2026-06-07T23:19:38.613Z] [WARN] VAPID keys not configured in environment variables. Generating temporary VAPID keys...
+[2026-06-07T23:19:38.638Z] [WARN] VAPID keys not configured in environment variables. Generating temporary VAPID keys...
+[2026-06-07T23:19:38.653Z] [INFO] [EmailSync] Starting background email sync service (2-minute intervals)...
+[2026-06-07T23:19:38.654Z] [INFO] =============================================
+[2026-06-07T23:19:38.654Z] [INFO]   LIQIFIN Backend running in development mode
+[2026-06-07T23:19:38.654Z] [INFO]   Access Local API: http://localhost:5001
+[2026-06-07T23:19:38.654Z] [INFO] =============================================
+[2026-06-07T23:19:38.683Z] [INFO] [EmailSync] Starting background email sync service (2-minute intervals)...
+[2026-06-07T23:19:38.685Z] [ERROR] CRITICAL: Uncaught Exception detected! Server shutting down... | Error: listen EADDRINUSE: address already in use :::5001
+Stack: Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2008:16)
+    at listenInCluster (node:net:2065:12)
+    at Server.listen (node:net:2170:7)
+    at app.listen (/Users/caliber/private/exp-trc/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/caliber/private/exp-trc/backend/src/index.ts:43:22)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+[2026-06-07T23:19:44.144Z] [WARN] VAPID keys not configured in environment variables. Generating temporary VAPID keys...
+[2026-06-07T23:19:44.149Z] [WARN] VAPID keys not configured in environment variables. Generating temporary VAPID keys...
+[2026-06-07T23:19:44.360Z] [INFO] [EmailSync] Starting background email sync service (2-minute intervals)...
+[2026-06-07T23:19:44.361Z] [INFO] =============================================
+[2026-06-07T23:19:44.361Z] [INFO]   LIQIFIN Backend running in development mode
+[2026-06-07T23:19:44.361Z] [INFO]   Access Local API: http://localhost:5001
+[2026-06-07T23:19:44.361Z] [INFO] =============================================
+[2026-06-07T23:19:44.370Z] [INFO] [EmailSync] Starting background email sync service (2-minute intervals)...
+[2026-06-07T23:19:44.371Z] [ERROR] CRITICAL: Uncaught Exception detected! Server shutting down... | Error: listen EADDRINUSE: address already in use :::5001
+Stack: Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2008:16)
+    at listenInCluster (node:net:2065:12)
+    at Server.listen (node:net:2170:7)
+    at app.listen (/Users/caliber/private/exp-trc/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/caliber/private/exp-trc/backend/src/index.ts:43:22)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+[2026-06-07T23:21:14.345Z] [WARN] VAPID keys not configured in environment variables. Generating temporary VAPID keys...
+[2026-06-07T23:21:14.560Z] [INFO] [EmailSync] Starting background email sync service (2-minute intervals)...
+[2026-06-07T23:21:14.560Z] [INFO] =============================================
+[2026-06-07T23:21:14.560Z] [INFO]   LIQIFIN Backend running in development mode
+[2026-06-07T23:21:14.560Z] [INFO]   Access Local API: http://localhost:5001
+[2026-06-07T23:21:14.560Z] [INFO] =============================================
+[2026-06-07T23:29:14.558Z] [INFO] [EmailSyncBackground] Triggering sync for 1 active users...
+[2026-06-07T23:29:14.560Z] [INFO] [EmailSync] Starting sync for user demo@liquid.finance (6a25ed8ed9716014b9e49da7)...
+[2026-06-07T23:29:19.263Z] [INFO] [EmailSync] Inbox contains 5535 messages. Fetching last 500 for evaluation...
+[2026-06-07T23:29:19.977Z] [INFO] [EmailSync] Starting sync for user demo@liquid.finance (6a25ed8ed9716014b9e49da7)...
+[2026-06-07T23:29:20.293Z] [INFO] [EmailSync] Fetched 501 candidate email headers. Evaluating...
+[2026-06-07T23:29:20.297Z] [INFO] [EmailSync] Processing matching email: Subject "Security alert" from "no-reply@accounts.google.com"
+[2026-06-07T23:29:20.741Z] [INFO] [EmailSync] Processing matching email: Subject "Security alert" from "no-reply@accounts.google.com"
+[2026-06-07T23:29:21.167Z] [INFO] [EmailSync] Processing matching email: Subject "INR 610.83 spent on credit card no. XX2629" from "alerts@axis.bank.in"
+[2026-06-07T23:29:21.624Z] [INFO] [EmailSync] Parsed transaction: INR 50698.89000000001 (610.83 USD) spent at ZOMATO on card ending 2629
+[2026-06-07T23:29:21.651Z] [INFO] [EmailSync] Processing matching email: Subject "INR 342.82 spent on credit card no. XX2629" from "alerts@axis.bank.in"
+[2026-06-07T23:29:22.094Z] [INFO] [EmailSync] Parsed transaction: INR 28454.059999999998 (342.82 USD) spent at ZOMATO on card ending 2629
+[2026-06-07T23:29:22.118Z] [INFO] [EmailSync] Processing matching email: Subject "INR 60 spent on credit card no. XX2629" from "alerts@axis.bank.in"
+[2026-06-07T23:29:22.582Z] [INFO] [EmailSync] Parsed transaction: INR 4980 (60 USD) spent at RAMESHKUMAR on card ending 2629
+[2026-06-07T23:29:22.611Z] [INFO] [EmailSync] Processing matching email: Subject "INR 90 spent on credit card no. XX2629" from "alerts@axis.bank.in"
+[2026-06-07T23:29:23.411Z] [INFO] [EmailSync] Parsed transaction: INR 7470 (90 USD) spent at PRIYANKA DE on card ending 2629
+[2026-06-07T23:29:23.436Z] [INFO] [EmailSync] Processing matching email: Subject "We value your feedback" from "alerts@axis.bank.in"
+[2026-06-07T23:29:23.855Z] [INFO] [EmailSync] Processing matching email: Subject "INR 540.63 spent on credit card no. XX2629" from "alerts@axis.bank.in"
+[2026-06-07T23:29:24.324Z] [INFO] [EmailSync] Parsed transaction: INR 44872.29 (540.63 USD) spent at ZOMATO LIMI on card ending 2629
+[2026-06-07T23:29:24.350Z] [INFO] [EmailSync] Processing matching email: Subject "INR 303.6 spent on credit card no. XX2629" from "alerts@axis.bank.in"
+[2026-06-07T23:29:24.523Z] [INFO] [EmailSync] Inbox contains 5535 messages. Fetching last 500 for evaluation...
+[2026-06-07T23:29:24.798Z] [INFO] [EmailSync] Parsed transaction: INR 25198.800000000003 (303.6 USD) spent at Google Indi on card ending 2629
+[2026-06-07T23:29:24.820Z] [INFO] [EmailSync] Processing matching email: Subject "INR 466 spent on credit card no. XX2629" from "alerts@axis.bank.in"
+[2026-06-07T23:29:25.262Z] [INFO] [EmailSync] Parsed transaction: INR 38678 (466 USD) spent at BLINKIT on card ending 2629
+[2026-06-07T23:29:25.276Z] [INFO] [EmailSync] Processing matching email: Subject "INR 653 spent on credit card no. XX2629" from "alerts@axis.bank.in"
+[2026-06-07T23:29:25.372Z] [INFO] [EmailSync] Fetched 501 candidate email headers. Evaluating...
+[2026-06-07T23:29:25.391Z] [INFO] [EmailSync] Processing matching email: Subject "INR 653 spent on credit card no. XX2629" from "alerts@axis.bank.in"
+[2026-06-07T23:29:25.720Z] [INFO] [EmailSync] Parsed transaction: INR 54199 (653 USD) spent at BLINKIT on card ending 2629
+[2026-06-07T23:29:25.747Z] [INFO] [EmailSync] Processing matching email: Subject "Security alert" from "no-reply@accounts.google.com"
+[2026-06-07T23:29:25.835Z] [INFO] [EmailSync] Parsed transaction: INR 54199 (653 USD) spent at BLINKIT on card ending 2629
+[2026-06-07T23:29:25.853Z] [ERROR] [EmailSync] Error processing message UID 5533: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<qocigb17807706832357826@axis.bank.in>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<qocigb17807706832357826@axis.bank.in>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:25.856Z] [INFO] [EmailSync] Processing matching email: Subject "Security alert" from "no-reply@accounts.google.com"
+[2026-06-07T23:29:26.232Z] [INFO] [EmailSync] Processing matching email: Subject "INR 706.82 spent on credit card no. XX2629" from "alerts@axis.bank.in"
+[2026-06-07T23:29:26.270Z] [ERROR] [EmailSync] Error processing message UID 5530: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<20wEbcQbG0HbATJdB3jiJA@notifications.google.com>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<20wEbcQbG0HbATJdB3jiJA@notifications.google.com>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:26.277Z] [INFO] [EmailSync] Processing matching email: Subject "INR 706.82 spent on credit card no. XX2629" from "alerts@axis.bank.in"
+[2026-06-07T23:29:26.689Z] [INFO] [EmailSync] Parsed transaction: INR 58666.060000000005 (706.82 USD) spent at Reliance Re on card ending 2629
+[2026-06-07T23:29:26.714Z] [INFO] [EmailSync] Parsed transaction: INR 58666.060000000005 (706.82 USD) spent at Reliance Re on card ending 2629
+[2026-06-07T23:29:26.718Z] [INFO] [EmailSync] Processing matching email: Subject "INR 1375 spent on credit card no. XX2629" from "alerts@axis.bank.in"
+[2026-06-07T23:29:26.729Z] [ERROR] [EmailSync] Error processing message UID 5529: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<dyosse17807706814355549@axis.bank.in>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<dyosse17807706814355549@axis.bank.in>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:26.731Z] [INFO] [EmailSync] Processing matching email: Subject "INR 1375 spent on credit card no. XX2629" from "alerts@axis.bank.in"
+[2026-06-07T23:29:27.158Z] [INFO] [EmailSync] Parsed transaction: INR 114125 (1375 USD) spent at BLINK COMME on card ending 2629
+[2026-06-07T23:29:27.173Z] [INFO] [EmailSync] Parsed transaction: INR 114125 (1375 USD) spent at BLINK COMME on card ending 2629
+[2026-06-07T23:29:27.180Z] [INFO] [EmailSync] Processing matching email: Subject "INR 272 spent on credit card no. XX2629" from "alerts@axis.bank.in"
+[2026-06-07T23:29:27.186Z] [ERROR] [EmailSync] Error processing message UID 5525: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<htpget17806842916517529@axis.bank.in>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<htpget17806842916517529@axis.bank.in>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:27.187Z] [INFO] [EmailSync] Processing matching email: Subject "INR 272 spent on credit card no. XX2629" from "alerts@axis.bank.in"
+[2026-06-07T23:29:27.666Z] [INFO] [EmailSync] Parsed transaction: INR 22576 (272 USD) spent at WWW EATSURE on card ending 2629
+[2026-06-07T23:29:27.672Z] [INFO] [EmailSync] Parsed transaction: INR 22576 (272 USD) spent at WWW EATSURE on card ending 2629
+[2026-06-07T23:29:27.693Z] [ERROR] [EmailSync] Error processing message UID 5524: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<hfoynq17806842916281449@axis.bank.in>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<hfoynq17806842916281449@axis.bank.in>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:27.695Z] [INFO] [EmailSync] Processing matching email: Subject "INR 1539.1 spent on credit card no. XX2629" from "alerts@axis.bank.in"
+[2026-06-07T23:29:27.696Z] [INFO] [EmailSync] Processing matching email: Subject "INR 1539.1 spent on credit card no. XX2629" from "alerts@axis.bank.in"
+[2026-06-07T23:29:28.176Z] [INFO] [EmailSync] Parsed transaction: INR 127745.29999999999 (1539.1 USD) spent at BLINKIT RET on card ending 2629
+[2026-06-07T23:29:28.186Z] [INFO] [EmailSync] Parsed transaction: INR 127745.29999999999 (1539.1 USD) spent at BLINKIT RET on card ending 2629
+[2026-06-07T23:29:28.197Z] [ERROR] [EmailSync] Error processing message UID 5519: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<tbsvse17806842894617099@axis.bank.in>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<tbsvse17806842894617099@axis.bank.in>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:28.199Z] [INFO] [EmailSync] Processing matching email: Subject "INR 222 spent on credit card no. XX2629" from "alerts@axis.bank.in"
+[2026-06-07T23:29:28.199Z] [INFO] [EmailSync] Processing matching email: Subject "INR 222 spent on credit card no. XX2629" from "alerts@axis.bank.in"
+[2026-06-07T23:29:28.636Z] [INFO] [EmailSync] Parsed transaction: INR 18426 (222 USD) spent at ATO REGENT on card ending 2629
+[2026-06-07T23:29:28.650Z] [INFO] [EmailSync] Parsed transaction: INR 18426 (222 USD) spent at ATO REGENT on card ending 2629
+[2026-06-07T23:29:28.664Z] [INFO] [EmailSync] Processing matching email: Subject "Delivered: Your Credit Card." from "alerts@axis.bank.in"
+[2026-06-07T23:29:28.665Z] [ERROR] [EmailSync] Error processing message UID 5516: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<pivttd17806842890989715@axis.bank.in>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<pivttd17806842890989715@axis.bank.in>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:28.666Z] [INFO] [EmailSync] Processing matching email: Subject "Delivered: Your Credit Card." from "alerts@axis.bank.in"
+[2026-06-07T23:29:29.112Z] [INFO] [EmailSync] Processing matching email: Subject "INR 294 spent on credit card no. XX2629" from "alerts@axis.bank.in"
+[2026-06-07T23:29:29.114Z] [ERROR] [EmailSync] Error processing message UID 5515: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<aumtnu17806842885192748@axis.bank.in>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<aumtnu17806842885192748@axis.bank.in>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:29.120Z] [INFO] [EmailSync] Processing matching email: Subject "INR 294 spent on credit card no. XX2629" from "alerts@axis.bank.in"
+[2026-06-07T23:29:29.612Z] [INFO] [EmailSync] Parsed transaction: INR 24402 (294 USD) spent at TATA STARBU on card ending 2629
+[2026-06-07T23:29:29.616Z] [INFO] [EmailSync] Parsed transaction: INR 24402 (294 USD) spent at TATA STARBU on card ending 2629
+[2026-06-07T23:29:29.642Z] [INFO] [EmailSync] Processing matching email: Subject "INR 200 spent on credit card no. XX2629" from "alerts@axis.bank.in"
+[2026-06-07T23:29:29.642Z] [ERROR] [EmailSync] Error processing message UID 5514: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<vkyure17806842880846853@axis.bank.in>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<vkyure17806842880846853@axis.bank.in>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:29.643Z] [INFO] [EmailSync] Processing matching email: Subject "INR 200 spent on credit card no. XX2629" from "alerts@axis.bank.in"
+[2026-06-07T23:29:30.122Z] [INFO] [EmailSync] Parsed transaction: INR 16600 (200 USD) spent at ATO REGENT on card ending 2629
+[2026-06-07T23:29:30.127Z] [INFO] [EmailSync] Parsed transaction: INR 16600 (200 USD) spent at ATO REGENT on card ending 2629
+[2026-06-07T23:29:30.149Z] [ERROR] [EmailSync] Error processing message UID 5513: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<ctclpl17806842879654742@axis.bank.in>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<ctclpl17806842879654742@axis.bank.in>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:30.150Z] [INFO] [EmailSync] Processing matching email: Subject "New PIN generation alert" from "alerts@axis.bank.in"
+[2026-06-07T23:29:30.151Z] [INFO] [EmailSync] Processing matching email: Subject "New PIN generation alert" from "alerts@axis.bank.in"
+[2026-06-07T23:29:30.564Z] [INFO] [EmailSync] Processing matching email: Subject "OTP for your Internet Banking / Mobile Banking transaction." from "alerts@axis.bank.in"
+[2026-06-07T23:29:30.579Z] [ERROR] [EmailSync] Error processing message UID 5509: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<rbdhur17806842870919358@axis.bank.in>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<rbdhur17806842870919358@axis.bank.in>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:30.583Z] [INFO] [EmailSync] Processing matching email: Subject "OTP for your Internet Banking / Mobile Banking transaction." from "alerts@axis.bank.in"
+[2026-06-07T23:29:30.966Z] [WARN] [EmailSync] FAILED TO PARSE definite transaction alert. Message-ID: <yedpnu17806842870943580@axis.bank.in>. Retaining in retry pool.
+[2026-06-07T23:29:30.973Z] [INFO] [EmailSync] Processing matching email: Subject "Consent management update - Confirmation" from "alerts@axis.bank.in"
+[2026-06-07T23:29:30.990Z] [WARN] [EmailSync] FAILED TO PARSE definite transaction alert. Message-ID: <yedpnu17806842870943580@axis.bank.in>. Retaining in retry pool.
+[2026-06-07T23:29:30.992Z] [INFO] [EmailSync] Processing matching email: Subject "Consent management update - Confirmation" from "alerts@axis.bank.in"
+[2026-06-07T23:29:31.383Z] [INFO] [EmailSync] Processing matching email: Subject "We value your feedback" from "alerts@axis.bank.in"
+[2026-06-07T23:29:31.401Z] [ERROR] [EmailSync] Error processing message UID 5506: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<1485963772.92088222.1780739150777@emailsenderunified-688fbd5654-lzsgf>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<1485963772.92088222.1780739150777@emailsenderunified-688fbd5654-lzsgf>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:31.405Z] [INFO] [EmailSync] Processing matching email: Subject "We value your feedback" from "alerts@axis.bank.in"
+[2026-06-07T23:29:32.062Z] [INFO] [EmailSync] Processing matching email: Subject "Dispatched: Your Credit Card." from "alerts@axis.bank.in"
+[2026-06-07T23:29:32.070Z] [ERROR] [EmailSync] Error processing message UID 5504: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<rpcnxu17806842863594675@axis.bank.in>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<rpcnxu17806842863594675@axis.bank.in>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:32.081Z] [INFO] [EmailSync] Processing matching email: Subject "Dispatched: Your Credit Card." from "alerts@axis.bank.in"
+[2026-06-07T23:29:32.548Z] [ERROR] [EmailSync] Error processing message UID 5482: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<trkiwj17805978863996954@axis.bank.in>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<trkiwj17805978863996954@axis.bank.in>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:32.549Z] [INFO] [EmailSync] Processing matching email: Subject "We value your feedback" from "alerts@axis.bank.in"
+[2026-06-07T23:29:32.550Z] [INFO] [EmailSync] Processing matching email: Subject "We value your feedback" from "alerts@axis.bank.in"
+[2026-06-07T23:29:33.014Z] [INFO] [EmailSync] Processing matching email: Subject "Regarding your application for Axis Bank Neo RuPay Credit Card" from "support@paisabazaar.com"
+[2026-06-07T23:29:33.055Z] [ERROR] [EmailSync] Error processing message UID 5480: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<qiuekt17805978863074833@axis.bank.in>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<qiuekt17805978863074833@axis.bank.in>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:33.062Z] [INFO] [EmailSync] Processing matching email: Subject "Regarding your application for Axis Bank Neo RuPay Credit Card" from "support@paisabazaar.com"
+[2026-06-07T23:29:33.501Z] [ERROR] [EmailSync] Error processing message UID 5461: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<a9516b2b-d0ce-2955-3083-a43248ca6aae@paisabazaar.com>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<a9516b2b-d0ce-2955-3083-a43248ca6aae@paisabazaar.com>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:33.523Z] [INFO] [EmailSync] Processing matching email: Subject "Your Axis Bank Credit Card application is approved" from "alerts@axis.bank.in"
+[2026-06-07T23:29:33.527Z] [INFO] [EmailSync] Processing matching email: Subject "Your Axis Bank Credit Card application is approved" from "alerts@axis.bank.in"
+[2026-06-07T23:29:34.014Z] [ERROR] [EmailSync] Error processing message UID 5451: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<ucjfok17805114844924894@axis.bank.in>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<ucjfok17805114844924894@axis.bank.in>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:34.032Z] [INFO] [EmailSync] Processing matching email: Subject "Regarding your application for Axis Bank Neo RuPay Credit Card" from "support@paisabazaar.com"
+[2026-06-07T23:29:34.032Z] [INFO] [EmailSync] Processing matching email: Subject "Regarding your application for Axis Bank Neo RuPay Credit Card" from "support@paisabazaar.com"
+[2026-06-07T23:29:34.526Z] [ERROR] [EmailSync] Error processing message UID 5445: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<3945853c-21a7-8cb4-d683-83b292e6a757@paisabazaar.com>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<3945853c-21a7-8cb4-d683-83b292e6a757@paisabazaar.com>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:34.549Z] [INFO] [EmailSync] Processing matching email: Subject "Regarding your application for Axis Bank Neo RuPay Credit Card" from "support@paisabazaar.com"
+[2026-06-07T23:29:34.549Z] [INFO] [EmailSync] Processing matching email: Subject "Regarding your application for Axis Bank Neo RuPay Credit Card" from "support@paisabazaar.com"
+[2026-06-07T23:29:34.958Z] [ERROR] [EmailSync] Error processing message UID 5429: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<6ef16e0d-eaa1-a089-06fd-c915fc86a151@paisabazaar.com>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<6ef16e0d-eaa1-a089-06fd-c915fc86a151@paisabazaar.com>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:34.973Z] [INFO] [EmailSync] Processing matching email: Subject "Regarding your application for Axis Bank Neo RuPay Credit Card" from "support@paisabazaar.com"
+[2026-06-07T23:29:34.978Z] [INFO] [EmailSync] Processing matching email: Subject "Regarding your application for Axis Bank Neo RuPay Credit Card" from "support@paisabazaar.com"
+[2026-06-07T23:29:35.447Z] [ERROR] [EmailSync] Error processing message UID 5421: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<0642288d-dc75-dd6c-6265-ccfc6b5ede12@paisabazaar.com>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<0642288d-dc75-dd6c-6265-ccfc6b5ede12@paisabazaar.com>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:35.476Z] [INFO] [EmailSync] Processing matching email: Subject "OTP to confirm your Personal e-mail ID" from "alerts@axis.bank.in"
+[2026-06-07T23:29:35.476Z] [INFO] [EmailSync] Processing matching email: Subject "OTP to confirm your Personal e-mail ID" from "alerts@axis.bank.in"
+[2026-06-07T23:29:35.958Z] [ERROR] [EmailSync] Error processing message UID 5397: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<mrutra17803386865062524@axis.bank.in>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<mrutra17803386865062524@axis.bank.in>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:35.974Z] [INFO] [EmailSync] Processing matching email: Subject "Grab your Credit Card Now!!" from "support@paisabazaar.com"
+[2026-06-07T23:29:35.975Z] [INFO] [EmailSync] Processing matching email: Subject "Grab your Credit Card Now!!" from "support@paisabazaar.com"
+[2026-06-07T23:29:36.383Z] [INFO] [EmailSync] Processing matching email: Subject "Grab your Credit Card Now!!" from "support@paisabazaar.com"
+[2026-06-07T23:29:36.384Z] [ERROR] [EmailSync] Error processing message UID 5390: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<0109019e86b5438d-db6946c9-8c02-4073-bac5-db53657f3521-000000@ap-south-1.amazonses.com>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<0109019e86b5438d-db6946c9-8c02-4073-bac5-db53657f3521-000000@ap-south-1.amazonses.com>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:36.388Z] [INFO] [EmailSync] Processing matching email: Subject "Grab your Credit Card Now!!" from "support@paisabazaar.com"
+[2026-06-07T23:29:36.882Z] [ERROR] [EmailSync] Error processing message UID 5389: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<0109019e86b48fc9-2308f5cd-7d1e-46fc-a5ed-efca145604eb-000000@ap-south-1.amazonses.com>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<0109019e86b48fc9-2308f5cd-7d1e-46fc-a5ed-efca145604eb-000000@ap-south-1.amazonses.com>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:36.889Z] [INFO] [EmailSync] Processing matching email: Subject "Regarding your application for Axis Bank Neo RuPay Credit Card" from "support@paisabazaar.com"
+[2026-06-07T23:29:36.890Z] [INFO] [EmailSync] Processing matching email: Subject "Regarding your application for Axis Bank Neo RuPay Credit Card" from "support@paisabazaar.com"
+[2026-06-07T23:29:37.393Z] [ERROR] [EmailSync] Error processing message UID 5386: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<a2e8442c-68d8-61ff-c34b-a18ff47f9da2@paisabazaar.com>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<a2e8442c-68d8-61ff-c34b-a18ff47f9da2@paisabazaar.com>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:37.401Z] [INFO] [EmailSync] Processing matching email: Subject "Attention! CIBIL Enquiry ALERT" from "noreply@cibilenqalert.transunion.com"
+[2026-06-07T23:29:37.404Z] [INFO] [EmailSync] Processing matching email: Subject "Attention! CIBIL Enquiry ALERT" from "noreply@cibilenqalert.transunion.com"
+[2026-06-07T23:29:37.814Z] [WARN] [EmailSync] FAILED TO PARSE definite transaction alert. Message-ID: <0109019e855dacaa-18e709e7-1649-40f1-a42c-5d3f6deda7e2-000000@ap-south-1.amazonses.com>. Retaining in retry pool.
+[2026-06-07T23:29:37.816Z] [WARN] [EmailSync] FAILED TO PARSE definite transaction alert. Message-ID: <0109019e855dacaa-18e709e7-1649-40f1-a42c-5d3f6deda7e2-000000@ap-south-1.amazonses.com>. Retaining in retry pool.
+[2026-06-07T23:29:37.819Z] [INFO] [EmailSync] Processing matching email: Subject "Regarding your application for Axis Bank Neo RuPay Credit Card" from "support@paisabazaar.com"
+[2026-06-07T23:29:37.831Z] [INFO] [EmailSync] Processing matching email: Subject "Regarding your application for Axis Bank Neo RuPay Credit Card" from "support@paisabazaar.com"
+[2026-06-07T23:29:38.315Z] [ERROR] [EmailSync] Error processing message UID 5382: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<6563eeef-ab0e-a43d-9921-6c99b57aca7e@paisabazaar.com>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<6563eeef-ab0e-a43d-9921-6c99b57aca7e@paisabazaar.com>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:38.380Z] [INFO] [EmailSync] Processing matching email: Subject "Attention! CIBIL Enquiry ALERT" from "noreply@cibilenqalert.transunion.com"
+[2026-06-07T23:29:38.381Z] [INFO] [EmailSync] Processing matching email: Subject "Attention! CIBIL Enquiry ALERT" from "noreply@cibilenqalert.transunion.com"
+[2026-06-07T23:29:38.825Z] [WARN] [EmailSync] FAILED TO PARSE definite transaction alert. Message-ID: <0109019e817cb29e-8fe2f54e-36c8-4b51-8820-6dd7da936b96-000000@ap-south-1.amazonses.com>. Retaining in retry pool.
+[2026-06-07T23:29:38.828Z] [WARN] [EmailSync] FAILED TO PARSE definite transaction alert. Message-ID: <0109019e817cb29e-8fe2f54e-36c8-4b51-8820-6dd7da936b96-000000@ap-south-1.amazonses.com>. Retaining in retry pool.
+[2026-06-07T23:29:38.849Z] [INFO] [EmailSync] Processing matching email: Subject "MacBook Alert: Your device just turned on — 03:00 PM IST" from "alex@orangefn.com"
+[2026-06-07T23:29:38.849Z] [INFO] [EmailSync] Processing matching email: Subject "MacBook Alert: Your device just turned on — 03:00 PM IST" from "alex@orangefn.com"
+[2026-06-07T23:29:39.348Z] [ERROR] [EmailSync] Error processing message UID 5346: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<0MA7pv-1wZtsy2aF7-00EGPK@mrelay.perfora.net>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<0MA7pv-1wZtsy2aF7-00EGPK@mrelay.perfora.net>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:39.356Z] [INFO] [EmailSync] Processing matching email: Subject "MacBook Alert: Your device just turned on — 06:34 AM IST" from "alex@orangefn.com"
+[2026-06-07T23:29:39.357Z] [INFO] [EmailSync] Processing matching email: Subject "MacBook Alert: Your device just turned on — 06:34 AM IST" from "alex@orangefn.com"
+[2026-06-07T23:29:39.849Z] [INFO] [EmailSync] Processing matching email: Subject "MacBook Alert: Your device just turned on — 06:30 AM IST" from "alex@orangefn.com"
+[2026-06-07T23:29:39.854Z] [ERROR] [EmailSync] Error processing message UID 5327: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<0LqBLK-1wy31i0WTA-00nOMT@mrelay.perfora.net>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<0LqBLK-1wy31i0WTA-00nOMT@mrelay.perfora.net>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:39.857Z] [INFO] [EmailSync] Processing matching email: Subject "MacBook Alert: Your device just turned on — 06:30 AM IST" from "alex@orangefn.com"
+[2026-06-07T23:29:40.314Z] [ERROR] [EmailSync] Error processing message UID 5326: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<0LqSSV-1wyK5O2mn3-00n5Is@mrelay.perfora.net>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<0LqSSV-1wyK5O2mn3-00n5Is@mrelay.perfora.net>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:40.342Z] [INFO] [EmailSync] Processing matching email: Subject "Security alert" from "no-reply@accounts.google.com"
+[2026-06-07T23:29:40.345Z] [INFO] [EmailSync] Processing matching email: Subject "Security alert" from "no-reply@accounts.google.com"
+[2026-06-07T23:29:40.861Z] [ERROR] [EmailSync] Error processing message UID 5279: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<VfAql05-KvM1wScZ_TsYWQ@notifications.google.com>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<VfAql05-KvM1wScZ_TsYWQ@notifications.google.com>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:40.904Z] [INFO] [EmailSync] Processing matching email: Subject "Security alert" from "no-reply@accounts.google.com"
+[2026-06-07T23:29:40.911Z] [INFO] [EmailSync] Processing matching email: Subject "Security alert" from "no-reply@accounts.google.com"
+[2026-06-07T23:29:41.474Z] [INFO] [EmailSync] Processing matching email: Subject "LazyPay Transaction Details - Blink Commerce Private Limited" from "noreply@lazypay.in"
+[2026-06-07T23:29:41.822Z] [ERROR] [EmailSync] Error processing message UID 5176: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<i_Xg4XZzBLrWu-EvKeqsBA@notifications.google.com>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<i_Xg4XZzBLrWu-EvKeqsBA@notifications.google.com>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:41.897Z] [INFO] [EmailSync] Processing matching email: Subject "LazyPay Transaction Details - Blink Commerce Private Limited" from "noreply@lazypay.in"
+[2026-06-07T23:29:41.911Z] [WARN] [EmailSync] FAILED TO PARSE definite transaction alert. Message-ID: <0109019e36fa6613-8f5cc9d1-3beb-4a38-b421-1d6f16773bf0-000000@ap-south-1.amazonses.com>. Retaining in retry pool.
+[2026-06-07T23:29:41.913Z] [INFO] [EmailSync] Processing matching email: Subject "LazyPay Transaction Details - Blink Commerce Private Limited" from "noreply@lazypay.in"
+[2026-06-07T23:29:42.321Z] [WARN] [EmailSync] FAILED TO PARSE definite transaction alert. Message-ID: <0109019e35b2cc31-6802a787-cb73-4928-818d-13c5d951f4c8-000000@ap-south-1.amazonses.com>. Retaining in retry pool.
+[2026-06-07T23:29:42.324Z] [WARN] [EmailSync] FAILED TO PARSE definite transaction alert. Message-ID: <0109019e36fa6613-8f5cc9d1-3beb-4a38-b421-1d6f16773bf0-000000@ap-south-1.amazonses.com>. Retaining in retry pool.
+[2026-06-07T23:29:42.338Z] [INFO] [EmailSync] Processing matching email: Subject "LazyPay Transaction Details - Blink Commerce Private Limited" from "noreply@lazypay.in"
+[2026-06-07T23:29:42.346Z] [INFO] [EmailSync] Processing matching email: Subject "LazyPay Transaction Details - Blink Commerce Private Limited" from "noreply@lazypay.in"
+[2026-06-07T23:29:42.757Z] [WARN] [EmailSync] FAILED TO PARSE definite transaction alert. Message-ID: <0109019e35b2cc31-6802a787-cb73-4928-818d-13c5d951f4c8-000000@ap-south-1.amazonses.com>. Retaining in retry pool.
+[2026-06-07T23:29:42.768Z] [WARN] [EmailSync] FAILED TO PARSE definite transaction alert. Message-ID: <0109019e31eedc75-16b74d60-86cd-46cd-af9e-f31350d5d585-000000@ap-south-1.amazonses.com>. Retaining in retry pool.
+[2026-06-07T23:29:42.781Z] [INFO] [EmailSync] Processing matching email: Subject "LazyPay Transaction Details - Blink Commerce Private Limited" from "noreply@lazypay.in"
+[2026-06-07T23:29:42.784Z] [INFO] [EmailSync] Processing matching email: Subject "LazyPay Transaction Details - Zomato" from "noreply@lazypay.in"
+[2026-06-07T23:29:43.195Z] [WARN] [EmailSync] FAILED TO PARSE definite transaction alert. Message-ID: <0109019e31eedc75-16b74d60-86cd-46cd-af9e-f31350d5d585-000000@ap-south-1.amazonses.com>. Retaining in retry pool.
+[2026-06-07T23:29:43.198Z] [WARN] [EmailSync] FAILED TO PARSE definite transaction alert. Message-ID: <0109019e312f5e50-a85e0796-9dca-4e17-a93c-15fe85b5fa55-000000@ap-south-1.amazonses.com>. Retaining in retry pool.
+[2026-06-07T23:29:43.221Z] [INFO] [EmailSync] Processing matching email: Subject "LazyPay Transaction Details - Zomato" from "noreply@lazypay.in"
+[2026-06-07T23:29:43.635Z] [INFO] [EmailSync] Completed sync for user demo@liquid.finance. Added 15 new expenses.
+[2026-06-07T23:29:43.649Z] [WARN] [EmailSync] FAILED TO PARSE definite transaction alert. Message-ID: <0109019e312f5e50-a85e0796-9dca-4e17-a93c-15fe85b5fa55-000000@ap-south-1.amazonses.com>. Retaining in retry pool.
+[2026-06-07T23:29:44.146Z] [INFO] [EmailSync] Completed sync for user demo@liquid.finance. Added 8 new expenses.
+[2026-06-07T23:31:14.584Z] [INFO] [EmailSyncBackground] Triggering sync for 1 active users...
+[2026-06-07T23:31:14.588Z] [INFO] [EmailSync] Starting sync for user demo@liquid.finance (6a25ed8ed9716014b9e49da7)...
+[2026-06-07T23:31:19.355Z] [INFO] [EmailSync] Inbox contains 5536 messages. Fetching last 500 for evaluation...
+[2026-06-07T23:31:20.552Z] [INFO] [EmailSync] Fetched 501 candidate email headers. Evaluating...
+[2026-06-07T23:31:20.587Z] [INFO] [EmailSync] Processing matching email: Subject "OTP for your Internet Banking / Mobile Banking transaction." from "alerts@axis.bank.in"
+[2026-06-07T23:31:21.005Z] [WARN] [EmailSync] FAILED TO PARSE definite transaction alert. Message-ID: <yedpnu17806842870943580@axis.bank.in>. Retaining in retry pool.
+[2026-06-07T23:31:21.158Z] [INFO] [EmailSync] Processing matching email: Subject "Attention! CIBIL Enquiry ALERT" from "noreply@cibilenqalert.transunion.com"
+[2026-06-07T23:31:21.667Z] [WARN] [EmailSync] FAILED TO PARSE definite transaction alert. Message-ID: <0109019e855dacaa-18e709e7-1649-40f1-a42c-5d3f6deda7e2-000000@ap-south-1.amazonses.com>. Retaining in retry pool.
+[2026-06-07T23:31:21.692Z] [INFO] [EmailSync] Processing matching email: Subject "Attention! CIBIL Enquiry ALERT" from "noreply@cibilenqalert.transunion.com"
+[2026-06-07T23:31:22.283Z] [WARN] [EmailSync] FAILED TO PARSE definite transaction alert. Message-ID: <0109019e817cb29e-8fe2f54e-36c8-4b51-8820-6dd7da936b96-000000@ap-south-1.amazonses.com>. Retaining in retry pool.
+[2026-06-07T23:31:22.451Z] [INFO] [EmailSync] Processing matching email: Subject "LazyPay Transaction Details - Blink Commerce Private Limited" from "noreply@lazypay.in"
+[2026-06-07T23:31:22.895Z] [WARN] [EmailSync] FAILED TO PARSE definite transaction alert. Message-ID: <0109019e36fa6613-8f5cc9d1-3beb-4a38-b421-1d6f16773bf0-000000@ap-south-1.amazonses.com>. Retaining in retry pool.
+[2026-06-07T23:31:22.915Z] [INFO] [EmailSync] Processing matching email: Subject "LazyPay Transaction Details - Blink Commerce Private Limited" from "noreply@lazypay.in"
+[2026-06-07T23:31:23.408Z] [WARN] [EmailSync] FAILED TO PARSE definite transaction alert. Message-ID: <0109019e35b2cc31-6802a787-cb73-4928-818d-13c5d951f4c8-000000@ap-south-1.amazonses.com>. Retaining in retry pool.
+[2026-06-07T23:31:23.430Z] [INFO] [EmailSync] Processing matching email: Subject "LazyPay Transaction Details - Blink Commerce Private Limited" from "noreply@lazypay.in"
+[2026-06-07T23:31:23.920Z] [WARN] [EmailSync] FAILED TO PARSE definite transaction alert. Message-ID: <0109019e31eedc75-16b74d60-86cd-46cd-af9e-f31350d5d585-000000@ap-south-1.amazonses.com>. Retaining in retry pool.
+[2026-06-07T23:31:23.941Z] [INFO] [EmailSync] Processing matching email: Subject "LazyPay Transaction Details - Zomato" from "noreply@lazypay.in"
+[2026-06-07T23:31:24.444Z] [WARN] [EmailSync] FAILED TO PARSE definite transaction alert. Message-ID: <0109019e312f5e50-a85e0796-9dca-4e17-a93c-15fe85b5fa55-000000@ap-south-1.amazonses.com>. Retaining in retry pool.
+[2026-06-07T23:31:24.839Z] [INFO] [EmailSync] Completed sync for user demo@liquid.finance. Added 0 new expenses.
+[2026-06-07T23:33:14.614Z] [INFO] [EmailSyncBackground] Triggering sync for 1 active users...
+[2026-06-07T23:33:14.617Z] [INFO] [EmailSync] Starting sync for user demo@liquid.finance (6a25ed8ed9716014b9e49da7)...
+[2026-06-07T23:33:19.265Z] [INFO] [EmailSync] Inbox contains 5536 messages. Fetching last 500 for evaluation...
+[2026-06-07T23:33:20.303Z] [INFO] [EmailSync] Fetched 501 candidate email headers. Evaluating...
+[2026-06-07T23:33:20.362Z] [INFO] [EmailSync] Processing matching email: Subject "OTP for your Internet Banking / Mobile Banking transaction." from "alerts@axis.bank.in"
+[2026-06-07T23:33:20.841Z] [WARN] [EmailSync] FAILED TO PARSE definite transaction alert. Message-ID: <yedpnu17806842870943580@axis.bank.in>. Retaining in retry pool.
+[2026-06-07T23:33:20.912Z] [INFO] [EmailSync] Processing matching email: Subject "Attention! CIBIL Enquiry ALERT" from "noreply@cibilenqalert.transunion.com"
+[2026-06-07T23:33:21.372Z] [WARN] [EmailSync] FAILED TO PARSE definite transaction alert. Message-ID: <0109019e855dacaa-18e709e7-1649-40f1-a42c-5d3f6deda7e2-000000@ap-south-1.amazonses.com>. Retaining in retry pool.
+[2026-06-07T23:33:21.403Z] [INFO] [EmailSync] Processing matching email: Subject "Attention! CIBIL Enquiry ALERT" from "noreply@cibilenqalert.transunion.com"
+[2026-06-07T23:33:21.997Z] [WARN] [EmailSync] FAILED TO PARSE definite transaction alert. Message-ID: <0109019e817cb29e-8fe2f54e-36c8-4b51-8820-6dd7da936b96-000000@ap-south-1.amazonses.com>. Retaining in retry pool.
+[2026-06-07T23:33:22.166Z] [INFO] [EmailSync] Processing matching email: Subject "LazyPay Transaction Details - Blink Commerce Private Limited" from "noreply@lazypay.in"
+[2026-06-07T23:33:22.716Z] [WARN] [EmailSync] FAILED TO PARSE definite transaction alert. Message-ID: <0109019e36fa6613-8f5cc9d1-3beb-4a38-b421-1d6f16773bf0-000000@ap-south-1.amazonses.com>. Retaining in retry pool.
+[2026-06-07T23:33:22.735Z] [INFO] [EmailSync] Processing matching email: Subject "LazyPay Transaction Details - Blink Commerce Private Limited" from "noreply@lazypay.in"
+[2026-06-07T23:33:23.234Z] [WARN] [EmailSync] FAILED TO PARSE definite transaction alert. Message-ID: <0109019e35b2cc31-6802a787-cb73-4928-818d-13c5d951f4c8-000000@ap-south-1.amazonses.com>. Retaining in retry pool.
+[2026-06-07T23:33:23.246Z] [INFO] [EmailSync] Processing matching email: Subject "LazyPay Transaction Details - Blink Commerce Private Limited" from "noreply@lazypay.in"
+[2026-06-07T23:33:23.842Z] [WARN] [EmailSync] FAILED TO PARSE definite transaction alert. Message-ID: <0109019e31eedc75-16b74d60-86cd-46cd-af9e-f31350d5d585-000000@ap-south-1.amazonses.com>. Retaining in retry pool.
+[2026-06-07T23:33:23.865Z] [INFO] [EmailSync] Processing matching email: Subject "LazyPay Transaction Details - Zomato" from "noreply@lazypay.in"
+[2026-06-07T23:33:24.334Z] [WARN] [EmailSync] FAILED TO PARSE definite transaction alert. Message-ID: <0109019e312f5e50-a85e0796-9dca-4e17-a93c-15fe85b5fa55-000000@ap-south-1.amazonses.com>. Retaining in retry pool.
+[2026-06-07T23:33:24.747Z] [INFO] [EmailSync] Completed sync for user demo@liquid.finance. Added 0 new expenses.

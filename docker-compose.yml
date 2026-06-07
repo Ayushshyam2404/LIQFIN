@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: liquid-finance-db
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - liquid-network
+
+  backend:
+    build: ./backend
+    container_name: liquid-finance-api
+    restart: unless-stopped
+    ports:
+      - "5001:5001"
+    environment:
+      - PORT=5001
+      - MONGODB_URI=mongodb://mongodb:27017/liquid-finance
+      - JWT_SECRET=liquid_finance_super_secret_access_token_key_12345!
+      - JWT_REFRESH_SECRET=liquid_finance_super_secret_refresh_token_key_54321!
+      - JWT_ACCESS_EXPIRY=15m
+      - JWT_REFRESH_EXPIRY=7d
+      - NODE_ENV=production
+      - FRONTEND_URL=http://localhost
+    depends_on:
+      - mongodb
+    networks:
+      - liquid-network
+
+  frontend:
+    build: ./frontend
+    container_name: liquid-finance-web
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - liquid-network
+
+volumes:
+  mongo-data:
+
+networks:
+  liquid-network:
+    driver: bridge
+

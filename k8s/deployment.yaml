@@ -1,0 +1,128 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: liquid-finance-db
+  labels:
+    app: liquid-finance-db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: liquid-finance-db
+  template:
+    metadata:
+      labels:
+        app: liquid-finance-db
+    spec:
+      containers:
+        - name: mongodb
+          image: mongo:latest
+          ports:
+            - containerPort: 27017
+          volumeMounts:
+            - name: db-storage
+              mountPath: /data/db
+      volumes:
+        - name: db-storage
+          persistentVolumeClaim:
+            claimName: mongo-pvc
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mongo-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongodb-service
+spec:
+  ports:
+    - port: 27017
+      targetPort: 27017
+  selector:
+    app: liquid-finance-db
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: liquid-finance-api
+  labels:
+    app: liquid-finance-api
+spec:
+  replicas: 2                # High-availability replicas
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  selector:
+    matchLabels:
+      app: liquid-finance-api
+  template:
+    metadata:
+      labels:
+        app: liquid-finance-api
+    spec:
+      containers:
+        - name: backend-api
+          image: liquid-finance-api:latest
+          ports:
+            - containerPort: 5001
+          env:
+            - name: PORT
+              value: "5001"
+            - name: MONGODB_URI
+              value: "mongodb://mongodb-service:27017/liquid-finance"
+            - name: JWT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: liquid-finance-secrets
+                  key: jwt-secret
+            - name: JWT_REFRESH_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: liquid-finance-secrets
+                  key: jwt-refresh-secret
+            - name: NODE_ENV
+              value: "production"
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 5001
+            initialDelaySeconds: 15
+            periodSeconds: 10
+            timeoutSeconds: 5
+            failureThreshold: 3
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 5001
+            initialDelaySeconds: 10
+            periodSeconds: 5
+            timeoutSeconds: 3
+          resources:
+            limits:
+              cpu: "1"
+              memory: "1Gi"
+            requests:
+              cpu: "250m"
+              memory: "256Mi"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-service
+spec:
+  ports:
+    - port: 5001
+      targetPort: 5001
+  selector:
+    app: liquid-finance-api
+  type: ClusterIP

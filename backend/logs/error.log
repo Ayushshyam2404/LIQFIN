@@ -1,0 +1,314 @@
+[2026-06-07T22:38:04.288Z] [ERROR] CRITICAL: Uncaught Exception detected! Server shutting down... | Error: listen EADDRINUSE: address already in use :::5001
+Stack: Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2008:16)
+    at listenInCluster (node:net:2065:12)
+    at Server.listen (node:net:2170:7)
+    at app.listen (/Users/caliber/private/exp-trc/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/caliber/private/exp-trc/backend/src/index.ts:43:22)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+[2026-06-07T22:38:09.553Z] [ERROR] CRITICAL: Uncaught Exception detected! Server shutting down... | Error: listen EADDRINUSE: address already in use :::5001
+Stack: Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2008:16)
+    at listenInCluster (node:net:2065:12)
+    at Server.listen (node:net:2170:7)
+    at app.listen (/Users/caliber/private/exp-trc/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/caliber/private/exp-trc/backend/src/index.ts:43:22)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+[2026-06-07T22:38:22.890Z] [ERROR] CRITICAL: Uncaught Exception detected! Server shutting down... | Error: listen EADDRINUSE: address already in use :::5001
+Stack: Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2008:16)
+    at listenInCluster (node:net:2065:12)
+    at Server.listen (node:net:2170:7)
+    at app.listen (/Users/caliber/private/exp-trc/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/caliber/private/exp-trc/backend/src/index.ts:43:22)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+[2026-06-07T22:40:31.709Z] [ERROR] CRITICAL: Uncaught Exception detected! Server shutting down... | Error: listen EADDRINUSE: address already in use :::5001
+Stack: Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2008:16)
+    at listenInCluster (node:net:2065:12)
+    at Server.listen (node:net:2170:7)
+    at app.listen (/Users/caliber/private/exp-trc/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/caliber/private/exp-trc/backend/src/index.ts:43:22)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+[2026-06-07T22:47:07.179Z] [ERROR] CRITICAL: Uncaught Exception detected! Server shutting down... | Error: listen EADDRINUSE: address already in use :::5001
+Stack: Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2008:16)
+    at listenInCluster (node:net:2065:12)
+    at Server.listen (node:net:2170:7)
+    at app.listen (/Users/caliber/private/exp-trc/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/caliber/private/exp-trc/backend/src/index.ts:43:22)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+[2026-06-07T23:19:11.805Z] [ERROR] CRITICAL: Uncaught Exception detected! Server shutting down... | Error: listen EADDRINUSE: address already in use :::5001
+Stack: Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2008:16)
+    at listenInCluster (node:net:2065:12)
+    at Server.listen (node:net:2170:7)
+    at app.listen (/Users/caliber/private/exp-trc/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/caliber/private/exp-trc/backend/src/index.ts:43:22)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+[2026-06-07T23:19:13.254Z] [ERROR] CRITICAL: Uncaught Exception detected! Server shutting down... | Error: listen EADDRINUSE: address already in use :::5001
+Stack: Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2008:16)
+    at listenInCluster (node:net:2065:12)
+    at Server.listen (node:net:2170:7)
+    at app.listen (/Users/caliber/private/exp-trc/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/caliber/private/exp-trc/backend/src/index.ts:43:22)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+[2026-06-07T23:19:20.298Z] [ERROR] CRITICAL: Uncaught Exception detected! Server shutting down... | Error: listen EADDRINUSE: address already in use :::5001
+Stack: Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2008:16)
+    at listenInCluster (node:net:2065:12)
+    at Server.listen (node:net:2170:7)
+    at app.listen (/Users/caliber/private/exp-trc/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/caliber/private/exp-trc/backend/src/index.ts:43:22)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+[2026-06-07T23:19:24.709Z] [ERROR] CRITICAL: Uncaught Exception detected! Server shutting down... | Error: listen EADDRINUSE: address already in use :::5001
+Stack: Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2008:16)
+    at listenInCluster (node:net:2065:12)
+    at Server.listen (node:net:2170:7)
+    at app.listen (/Users/caliber/private/exp-trc/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/caliber/private/exp-trc/backend/src/index.ts:43:22)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+[2026-06-07T23:19:28.000Z] [ERROR] CRITICAL: Uncaught Exception detected! Server shutting down... | Error: listen EADDRINUSE: address already in use :::5001
+Stack: Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2008:16)
+    at listenInCluster (node:net:2065:12)
+    at Server.listen (node:net:2170:7)
+    at app.listen (/Users/caliber/private/exp-trc/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/caliber/private/exp-trc/backend/src/index.ts:43:22)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+[2026-06-07T23:19:36.519Z] [ERROR] CRITICAL: Uncaught Exception detected! Server shutting down... | Error: listen EADDRINUSE: address already in use :::5001
+Stack: Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2008:16)
+    at listenInCluster (node:net:2065:12)
+    at Server.listen (node:net:2170:7)
+    at app.listen (/Users/caliber/private/exp-trc/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/caliber/private/exp-trc/backend/src/index.ts:43:22)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+[2026-06-07T23:19:38.685Z] [ERROR] CRITICAL: Uncaught Exception detected! Server shutting down... | Error: listen EADDRINUSE: address already in use :::5001
+Stack: Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2008:16)
+    at listenInCluster (node:net:2065:12)
+    at Server.listen (node:net:2170:7)
+    at app.listen (/Users/caliber/private/exp-trc/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/caliber/private/exp-trc/backend/src/index.ts:43:22)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+[2026-06-07T23:19:44.371Z] [ERROR] CRITICAL: Uncaught Exception detected! Server shutting down... | Error: listen EADDRINUSE: address already in use :::5001
+Stack: Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2008:16)
+    at listenInCluster (node:net:2065:12)
+    at Server.listen (node:net:2170:7)
+    at app.listen (/Users/caliber/private/exp-trc/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/caliber/private/exp-trc/backend/src/index.ts:43:22)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+[2026-06-07T23:29:25.853Z] [ERROR] [EmailSync] Error processing message UID 5533: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<qocigb17807706832357826@axis.bank.in>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<qocigb17807706832357826@axis.bank.in>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:26.270Z] [ERROR] [EmailSync] Error processing message UID 5530: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<20wEbcQbG0HbATJdB3jiJA@notifications.google.com>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<20wEbcQbG0HbATJdB3jiJA@notifications.google.com>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:26.729Z] [ERROR] [EmailSync] Error processing message UID 5529: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<dyosse17807706814355549@axis.bank.in>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<dyosse17807706814355549@axis.bank.in>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:27.186Z] [ERROR] [EmailSync] Error processing message UID 5525: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<htpget17806842916517529@axis.bank.in>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<htpget17806842916517529@axis.bank.in>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:27.693Z] [ERROR] [EmailSync] Error processing message UID 5524: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<hfoynq17806842916281449@axis.bank.in>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<hfoynq17806842916281449@axis.bank.in>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:28.197Z] [ERROR] [EmailSync] Error processing message UID 5519: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<tbsvse17806842894617099@axis.bank.in>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<tbsvse17806842894617099@axis.bank.in>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:28.665Z] [ERROR] [EmailSync] Error processing message UID 5516: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<pivttd17806842890989715@axis.bank.in>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<pivttd17806842890989715@axis.bank.in>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:29.114Z] [ERROR] [EmailSync] Error processing message UID 5515: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<aumtnu17806842885192748@axis.bank.in>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<aumtnu17806842885192748@axis.bank.in>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:29.642Z] [ERROR] [EmailSync] Error processing message UID 5514: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<vkyure17806842880846853@axis.bank.in>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<vkyure17806842880846853@axis.bank.in>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:30.149Z] [ERROR] [EmailSync] Error processing message UID 5513: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<ctclpl17806842879654742@axis.bank.in>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<ctclpl17806842879654742@axis.bank.in>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:30.579Z] [ERROR] [EmailSync] Error processing message UID 5509: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<rbdhur17806842870919358@axis.bank.in>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<rbdhur17806842870919358@axis.bank.in>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:31.401Z] [ERROR] [EmailSync] Error processing message UID 5506: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<1485963772.92088222.1780739150777@emailsenderunified-688fbd5654-lzsgf>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<1485963772.92088222.1780739150777@emailsenderunified-688fbd5654-lzsgf>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:32.070Z] [ERROR] [EmailSync] Error processing message UID 5504: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<rpcnxu17806842863594675@axis.bank.in>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<rpcnxu17806842863594675@axis.bank.in>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:32.548Z] [ERROR] [EmailSync] Error processing message UID 5482: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<trkiwj17805978863996954@axis.bank.in>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<trkiwj17805978863996954@axis.bank.in>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:33.055Z] [ERROR] [EmailSync] Error processing message UID 5480: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<qiuekt17805978863074833@axis.bank.in>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<qiuekt17805978863074833@axis.bank.in>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:33.501Z] [ERROR] [EmailSync] Error processing message UID 5461: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<a9516b2b-d0ce-2955-3083-a43248ca6aae@paisabazaar.com>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<a9516b2b-d0ce-2955-3083-a43248ca6aae@paisabazaar.com>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:34.014Z] [ERROR] [EmailSync] Error processing message UID 5451: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<ucjfok17805114844924894@axis.bank.in>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<ucjfok17805114844924894@axis.bank.in>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:34.526Z] [ERROR] [EmailSync] Error processing message UID 5445: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<3945853c-21a7-8cb4-d683-83b292e6a757@paisabazaar.com>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<3945853c-21a7-8cb4-d683-83b292e6a757@paisabazaar.com>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:34.958Z] [ERROR] [EmailSync] Error processing message UID 5429: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<6ef16e0d-eaa1-a089-06fd-c915fc86a151@paisabazaar.com>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<6ef16e0d-eaa1-a089-06fd-c915fc86a151@paisabazaar.com>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:35.447Z] [ERROR] [EmailSync] Error processing message UID 5421: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<0642288d-dc75-dd6c-6265-ccfc6b5ede12@paisabazaar.com>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<0642288d-dc75-dd6c-6265-ccfc6b5ede12@paisabazaar.com>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:35.958Z] [ERROR] [EmailSync] Error processing message UID 5397: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<mrutra17803386865062524@axis.bank.in>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<mrutra17803386865062524@axis.bank.in>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:36.384Z] [ERROR] [EmailSync] Error processing message UID 5390: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<0109019e86b5438d-db6946c9-8c02-4073-bac5-db53657f3521-000000@ap-south-1.amazonses.com>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<0109019e86b5438d-db6946c9-8c02-4073-bac5-db53657f3521-000000@ap-south-1.amazonses.com>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:36.882Z] [ERROR] [EmailSync] Error processing message UID 5389: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<0109019e86b48fc9-2308f5cd-7d1e-46fc-a5ed-efca145604eb-000000@ap-south-1.amazonses.com>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<0109019e86b48fc9-2308f5cd-7d1e-46fc-a5ed-efca145604eb-000000@ap-south-1.amazonses.com>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:37.393Z] [ERROR] [EmailSync] Error processing message UID 5386: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<a2e8442c-68d8-61ff-c34b-a18ff47f9da2@paisabazaar.com>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<a2e8442c-68d8-61ff-c34b-a18ff47f9da2@paisabazaar.com>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:38.315Z] [ERROR] [EmailSync] Error processing message UID 5382: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<6563eeef-ab0e-a43d-9921-6c99b57aca7e@paisabazaar.com>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<6563eeef-ab0e-a43d-9921-6c99b57aca7e@paisabazaar.com>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:39.348Z] [ERROR] [EmailSync] Error processing message UID 5346: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<0MA7pv-1wZtsy2aF7-00EGPK@mrelay.perfora.net>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<0MA7pv-1wZtsy2aF7-00EGPK@mrelay.perfora.net>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:39.854Z] [ERROR] [EmailSync] Error processing message UID 5327: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<0LqBLK-1wy31i0WTA-00nOMT@mrelay.perfora.net>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<0LqBLK-1wy31i0WTA-00nOMT@mrelay.perfora.net>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:40.314Z] [ERROR] [EmailSync] Error processing message UID 5326: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<0LqSSV-1wyK5O2mn3-00n5Is@mrelay.perfora.net>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<0LqSSV-1wyK5O2mn3-00n5Is@mrelay.perfora.net>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:40.861Z] [ERROR] [EmailSync] Error processing message UID 5279: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<VfAql05-KvM1wScZ_TsYWQ@notifications.google.com>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<VfAql05-KvM1wScZ_TsYWQ@notifications.google.com>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
+[2026-06-07T23:29:41.822Z] [ERROR] [EmailSync] Error processing message UID 5176: | Error: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<i_Xg4XZzBLrWu-EvKeqsBA@notifications.google.com>" }
+Stack: MongoServerError: E11000 duplicate key error collection: liquid-finance.processedemails index: userId_1_messageId_1 dup key: { userId: ObjectId('6a25ed8ed9716014b9e49da7'), messageId: "<i_Xg4XZzBLrWu-EvKeqsBA@notifications.google.com>" }
+    at InsertOneOperation.handleOk (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/insert.ts:79:13)
+    at tryOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:290:26)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async executeOperation (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/operations/execute_operation.ts:119:12)
+    at async Collection.insertOne (/Users/caliber/private/exp-trc/backend/node_modules/mongodb/src/collection.ts:294:12)
