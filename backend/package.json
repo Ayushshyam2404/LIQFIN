@@ -9,7 +9,7 @@
     "dev": "nodemon src/index.ts",
     "seed": "ts-node src/config/seed.ts",
     "test-webhook": "ts-node src/config/testWebhook.ts",
-    "test": "ts-node src/utils/retry.test.ts && ts-node src/app.test.ts"
+    "test": "ts-node src/utils/retry.test.ts && ts-node src/validators/index.test.ts && ts-node src/utils/mimeParser.test.ts && ts-node src/utils/emailParser.test.ts && ts-node src/utils/crypto.test.ts && ts-node src/middleware/sanitizeMiddleware.test.ts && ts-node src/middleware/errorMiddleware.test.ts && ts-node src/middleware/authMiddleware.test.ts && ts-node src/app.test.ts"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
