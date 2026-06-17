@@ -19,8 +19,8 @@ import { getHealth } from './controllers/healthController';
 
 const app = express();
 
-// Trust proxy headers for behind reverse proxies (like Heroku, AWS, Cloudflare, etc.)
-app.enable('trust proxy');
+// Trust first proxy hop only (avoids ERR_ERL_PERMISSIVE_TRUST_PROXY with express-rate-limit)
+app.set('trust proxy', 1);
 
 // Redirect HTTP to HTTPS in production
 if (process.env.NODE_ENV === 'production') {

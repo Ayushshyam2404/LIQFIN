@@ -24,8 +24,8 @@ test('API Integration Test - Health Check Endpoint returns 200 OK', async () => 
     
     const data = await response.json() as any;
     assert.ok(data.status === 'UP' || data.status === 'DEGRADED', 'Status should be UP or DEGRADED');
-    assert.ok(data.system, 'System metrics should be present');
     assert.ok(data.database, 'Database health status should be present');
+    assert.ok(!data.system, 'System metrics must not be exposed');
   } finally {
     // Gracefully teardown the test server
     await new Promise<void>((resolve) => server.close(() => resolve()));
