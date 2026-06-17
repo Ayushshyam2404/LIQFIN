@@ -4,6 +4,7 @@ import { CreditCard } from '../models/CreditCard';
 import { Expense } from '../models/Expense';
 import { creditCardSchema } from '../validators';
 import { AuthenticatedRequest } from '../middleware/authMiddleware';
+import { calculateCardBalance } from '../utils/aggregateHelpers';
 
 export const createCard = async (req: AuthenticatedRequest, res: Response, next: NextFunction): Promise<void> => {
   try {
@@ -44,18 +45,9 @@ export const getCards = async (req: AuthenticatedRequest, res: Response, next: N
     const cards = await CreditCard.find({ userId: new Types.ObjectId(userId) }).sort({ createdAt: -1 });
 
     // Ensure card balances are accurately in sync with expenses
+    const userObjectId = new Types.ObjectId(userId);
     for (const card of cards) {
-      const cardExpenses = await Expense.aggregate([
-        {
-          $match: {
-            userId: new Types.ObjectId(userId),
-            paymentMethod: 'credit_card',
-            creditCardId: card._id
-          }
-        },
-        { $group: { _id: null, total: { $sum: '$amount' } } }
-      ]);
-      const actualBalance = cardExpenses[0]?.total || 0;
+      const actualBalance = await calculateCardBalance(userObjectId, card._id);
       if (card.currentBalance !== actualBalance) {
         card.currentBalance = actualBalance;
         await card.save();
@@ -80,17 +72,7 @@ export const getCardById = async (req: AuthenticatedRequest, res: Response, next
     }
 
     // Sync balance with actual expenses
-    const cardExpenses = await Expense.aggregate([
-      {
-        $match: {
-          userId: new Types.ObjectId(userId),
-          paymentMethod: 'credit_card',
-          creditCardId: card._id
-        }
-      },
-      { $group: { _id: null, total: { $sum: '$amount' } } }
-    ]);
-    card.currentBalance = cardExpenses[0]?.total || 0;
+    card.currentBalance = await calculateCardBalance(new Types.ObjectId(userId), card._id);
     await card.save();
 
     res.status(200).json({ success: true, card });

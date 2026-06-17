@@ -15,6 +15,8 @@ import { useFinanceStore } from '../store/useFinanceStore';
 import { useSettingsStore } from '../store/useSettingsStore';
 import { CardSkeleton } from '../components/ui/Loading';
 import { EmptyState } from '../components/ui/EmptyState';
+import { EXPENSE_CATEGORIES } from '../constants/categories';
+import { getCurrentYearMonth } from '../utils/dateHelpers';
 
 const goalFormSchema = z.object({
   title: z.string().min(1, 'Title is required'),
@@ -54,16 +56,9 @@ export const GoalsPage: React.FC = () => {
   const [depositGoalId, setDepositGoalId] = useState<string | null>(null);
   const [depositAmount, setDepositAmount] = useState(100);
 
-  const categories = [
-    'Food', 'Groceries', 'Travel', 'Transportation', 'Entertainment', 
-    'Shopping', 'Bills', 'Healthcare', 'Education', 'Rent', 'Utilities', 
-    'Investments', 'Miscellaneous'
-  ];
+  const categories = EXPENSE_CATEGORIES;
 
-  const currentMonthString = (() => {
-    const d = new Date();
-    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`;
-  })();
+  const currentMonthString = getCurrentYearMonth();
 
   useEffect(() => {
     fetchGoals();

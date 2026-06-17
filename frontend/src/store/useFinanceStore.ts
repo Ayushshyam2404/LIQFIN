@@ -1,6 +1,8 @@
 import { create } from 'zustand';
 import { api } from '../services/api';
 import { db, LocalExpense, LocalCreditCard, LocalBudget, LocalGoal, LocalNotification } from '../services/db';
+import { getCurrentYearMonth } from '../utils/dateHelpers';
+import { offlineCreate, offlineEdit, offlineDelete, offlineFetch, isLocalId } from '../utils/offlineSync';
 
 interface FinanceState {
   expenses: LocalExpense[];
@@ -552,133 +554,73 @@ export const useFinanceStore = create<FinanceState>((set, get) => {
     // CREDIT CARDS
     // ----------------------------------------------------
     fetchCards: async () => {
-      if (isOnline()) {
-        try {
-          const res = await api.get('/cards');
-          if (res.data.success) {
-            const cardData = res.data.cards.map((c: any) => ({ ...c, id: c._id }));
-            set({ cards: cardData });
-            
-            // Cache
-            await db.cards.clear();
-            for (const c of cardData) {
-              await db.cards.put(c);
-            }
-            return;
-          }
-        } catch (err) {
-          console.error(err);
-        }
-      }
-      const local = await db.cards.toArray();
-      set({ cards: local });
+      const cards = await offlineFetch<LocalCreditCard>({
+        table: db.cards,
+        apiPath: '/cards',
+        responseKey: 'cards',
+        isOnline
+      });
+      set({ cards });
     },
 
     addCard: async (card) => {
-      const tempId = 'local_' + Math.random().toString(36).substring(2);
-      const localCard: LocalCreditCard = { ...card, id: tempId, isOfflinePending: true };
-
-      await db.cards.add(localCard);
-      set((state) => ({ cards: [localCard, ...state.cards] }));
-
-      if (isOnline()) {
-        try {
-          const res = await api.post('/cards', card);
-          if (res.data.success) {
-            await db.cards.delete(tempId);
-            const saved = { ...res.data.card, id: res.data.card._id };
-            await db.cards.add(saved);
-
-            set((state) => ({
-              cards: state.cards.map((c) => (c.id === tempId ? saved : c))
-            }));
-            return true;
-          }
-        } catch (err) {
-          console.log('Online card save failed.');
-        }
-      }
-
-      await db.syncQueue.add({
-        action: 'create',
+      const { success, record } = await offlineCreate<LocalCreditCard>({
+        table: db.cards,
+        apiPath: '/cards',
         type: 'card',
-        payload: { ...card, tempId },
-        createdAt: Date.now()
+        payload: card,
+        responseKey: 'card',
+        isOnline
       });
 
-      return true;
+      if (success) {
+        set((state) => ({
+          cards: state.cards.some(c => c.id === record.id)
+            ? state.cards.map(c => c.id === record.id ? record : c)
+            : [record, ...state.cards]
+        }));
+      }
+      return success;
     },
 
     editCard: async (id, card) => {
-      const cardId = id;
-      const isLocal = cardId.startsWith('local_');
+      const { success, record } = await offlineEdit<LocalCreditCard>({
+        table: db.cards,
+        apiPath: '/cards',
+        type: 'card',
+        id,
+        updates: card,
+        isOnline
+      });
 
-      const existing = await db.cards.get(cardId);
-      if (!existing) return false;
-
-      const updated = { ...existing, ...card };
-      await db.cards.put(updated);
-
-      set((state) => ({
-        cards: state.cards.map((c) => (c.id === cardId ? updated : c))
-      }));
-
-      if (isOnline() && !isLocal) {
-        try {
-          await api.put(`/cards/${cardId}`, card);
-          return true;
-        } catch (err) {
-          console.log(err);
-        }
+      if (success && record) {
+        set((state) => ({
+          cards: state.cards.map((c) => (c.id === id ? record : c))
+        }));
       }
-
-      if (!isLocal) {
-        await db.syncQueue.add({
-          action: 'update',
-          type: 'card',
-          targetId: cardId,
-          payload: card,
-          createdAt: Date.now()
-        });
-      }
-
-      return true;
+      return success;
     },
 
     deleteCard: async (id) => {
-      const cardId = id;
-      const isLocal = cardId.startsWith('local_');
+      const success = await offlineDelete<LocalCreditCard>({
+        table: db.cards,
+        apiPath: '/cards',
+        type: 'card',
+        id,
+        isOnline
+      });
 
-      await db.cards.delete(cardId);
-      set((state) => ({ cards: state.cards.filter((c) => c.id !== cardId) }));
-
-      if (isOnline() && !isLocal) {
-        try {
-          await api.delete(`/cards/${cardId}`);
-          return true;
-        } catch (err) {
-          console.log(err);
-        }
+      if (success) {
+        set((state) => ({ cards: state.cards.filter((c) => c.id !== id) }));
       }
-
-      if (!isLocal) {
-        await db.syncQueue.add({
-          action: 'delete',
-          type: 'card',
-          targetId: cardId,
-          createdAt: Date.now()
-        });
-      }
-
-      return true;
+      return success;
     },
 
     // ----------------------------------------------------
     // BUDGETS
     // ----------------------------------------------------
     fetchBudgets: async (month) => {
-      const now = new Date();
-      const targetMonth = month || `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`;
+      const targetMonth = month || getCurrentYearMonth();
 
       if (isOnline()) {
         try {
@@ -687,7 +629,6 @@ export const useFinanceStore = create<FinanceState>((set, get) => {
             const mapped = res.data.budgets.map((b: any) => ({ ...b, id: b._id }));
             set({ budgets: mapped });
             
-            // Cache to local db
             await db.budgets.clear();
             for (const b of mapped) {
               await db.budgets.put(b);
@@ -753,175 +694,100 @@ export const useFinanceStore = create<FinanceState>((set, get) => {
     },
 
     deleteBudget: async (id) => {
-      const budgetId = id;
-      const isLocal = budgetId.startsWith('local_');
+      const success = await offlineDelete<LocalBudget>({
+        table: db.budgets,
+        apiPath: '/budgets',
+        type: 'budget',
+        id,
+        isOnline
+      });
 
-      await db.budgets.delete(budgetId);
-      set((state) => ({ budgets: state.budgets.filter((b) => b.id !== budgetId) }));
-
-      if (isOnline() && !isLocal) {
-        try {
-          await api.delete(`/budgets/${budgetId}`);
-          return true;
-        } catch (err) {
-          console.log(err);
-        }
+      if (success) {
+        set((state) => ({ budgets: state.budgets.filter((b) => b.id !== id) }));
       }
-
-      if (!isLocal) {
-        await db.syncQueue.add({
-          action: 'delete',
-          type: 'budget',
-          targetId: budgetId,
-          createdAt: Date.now()
-        });
-      }
-
-      return true;
+      return success;
     },
 
     // ----------------------------------------------------
     // GOALS
     // ----------------------------------------------------
     fetchGoals: async () => {
-      if (isOnline()) {
-        try {
-          const res = await api.get('/goals');
-          if (res.data.success) {
-            const mapped = res.data.goals.map((g: any) => ({ ...g, id: g._id }));
-            set({ goals: mapped });
-
-            await db.goals.clear();
-            for (const g of mapped) {
-              await db.goals.put(g);
-            }
-            return;
-          }
-        } catch (err) {
-          console.error(err);
-        }
-      }
-
-      const local = await db.goals.toArray();
-      set({ goals: local });
+      const goals = await offlineFetch<LocalGoal>({
+        table: db.goals,
+        apiPath: '/goals',
+        responseKey: 'goals',
+        isOnline
+      });
+      set({ goals });
     },
 
     addGoal: async (goal) => {
-      const tempId = 'local_' + Math.random().toString(36).substring(2);
-      const localGoal: LocalGoal = { ...goal, id: tempId, isOfflinePending: true };
-
-      await db.goals.add(localGoal);
-      set((state) => ({ goals: [...state.goals, localGoal] }));
-
-      if (isOnline()) {
-        try {
-          const res = await api.post('/goals', goal);
-          if (res.data.success) {
-            await db.goals.delete(tempId);
-            const saved = { ...res.data.goal, id: res.data.goal._id };
-            await db.goals.add(saved);
-
-            set((state) => ({
-              goals: state.goals.map((g) => (g.id === tempId ? saved : g))
-            }));
-            return true;
-          }
-        } catch (err) {
-          console.log(err);
-        }
-      }
-
-      await db.syncQueue.add({
-        action: 'create',
+      const { success, record } = await offlineCreate<LocalGoal>({
+        table: db.goals,
+        apiPath: '/goals',
         type: 'goal',
-        payload: { ...goal, tempId },
-        createdAt: Date.now()
+        payload: goal,
+        responseKey: 'goal',
+        isOnline
       });
 
-      return true;
+      if (success) {
+        set((state) => ({
+          goals: state.goals.some(g => g.id === record.id)
+            ? state.goals.map(g => g.id === record.id ? record : g)
+            : [...state.goals, record]
+        }));
+      }
+      return success;
     },
 
     editGoal: async (id, goal) => {
-      const goalId = id;
-      const isLocal = goalId.startsWith('local_');
+      const { success, record } = await offlineEdit<LocalGoal>({
+        table: db.goals,
+        apiPath: '/goals',
+        type: 'goal',
+        id,
+        updates: goal,
+        isOnline
+      });
 
-      const existing = await db.goals.get(goalId);
-      if (!existing) return false;
-
-      const updated = { ...existing, ...goal };
-      await db.goals.put(updated);
-
-      set((state) => ({
-        goals: state.goals.map((g) => (g.id === goalId ? updated : g))
-      }));
-
-      if (isOnline() && !isLocal) {
-        try {
-          await api.put(`/goals/${goalId}`, goal);
-          return true;
-        } catch (err) {
-          console.log(err);
-        }
+      if (success && record) {
+        set((state) => ({
+          goals: state.goals.map((g) => (g.id === id ? record : g))
+        }));
       }
-
-      if (!isLocal) {
-        await db.syncQueue.add({
-          action: 'update',
-          type: 'goal',
-          targetId: goalId,
-          payload: goal,
-          createdAt: Date.now()
-        });
-      }
-
-      return true;
+      return success;
     },
 
     deleteGoal: async (id) => {
-      const goalId = id;
-      const isLocal = goalId.startsWith('local_');
+      const success = await offlineDelete<LocalGoal>({
+        table: db.goals,
+        apiPath: '/goals',
+        type: 'goal',
+        id,
+        isOnline
+      });
 
-      await db.goals.delete(goalId);
-      set((state) => ({ goals: state.goals.filter((g) => g.id !== goalId) }));
-
-      if (isOnline() && !isLocal) {
-        try {
-          await api.delete(`/goals/${goalId}`);
-          return true;
-        } catch (err) {
-          console.log(err);
-        }
+      if (success) {
+        set((state) => ({ goals: state.goals.filter((g) => g.id !== id) }));
       }
-
-      if (!isLocal) {
-        await db.syncQueue.add({
-          action: 'delete',
-          type: 'goal',
-          targetId: goalId,
-          createdAt: Date.now()
-        });
-      }
-
-      return true;
+      return success;
     },
 
     addFundsToGoal: async (id, amount) => {
-      const goalId = id;
-      const isLocal = goalId.startsWith('local_');
-
-      const existing = await db.goals.get(goalId);
+      const existing = await db.goals.get(id);
       if (!existing) return false;
 
       const updatedAmount = existing.currentAmount + amount;
-      await db.goals.update(goalId, { currentAmount: updatedAmount });
+      await db.goals.update(id, { currentAmount: updatedAmount });
 
       set((state) => ({
-        goals: state.goals.map((g) => (g.id === goalId ? { ...g, currentAmount: updatedAmount } : g))
+        goals: state.goals.map((g) => (g.id === id ? { ...g, currentAmount: updatedAmount } : g))
       }));
 
-      if (isOnline() && !isLocal) {
+      if (isOnline() && !isLocalId(id)) {
         try {
-          const res = await api.post(`/goals/${goalId}/add-funds`, { amount });
+          const res = await api.post(`/goals/${id}/add-funds`, { amount });
           if (res.data.success) {
             get().fetchDashboard();
             return true;
@@ -931,11 +797,11 @@ export const useFinanceStore = create<FinanceState>((set, get) => {
         }
       }
 
-      if (!isLocal) {
+      if (!isLocalId(id)) {
         await db.syncQueue.add({
           action: 'update',
           type: 'goal',
-          targetId: goalId,
+          targetId: id,
           payload: { currentAmount: updatedAmount },
           createdAt: Date.now()
         });
@@ -948,26 +814,13 @@ export const useFinanceStore = create<FinanceState>((set, get) => {
     // NOTIFICATIONS
     // ----------------------------------------------------
     fetchNotifications: async () => {
-      if (isOnline()) {
-        try {
-          const res = await api.get('/notifications');
-          if (res.data.success) {
-            const mapped = res.data.notifications.map((n: any) => ({ ...n, id: n._id }));
-            set({ notifications: mapped });
-
-            await db.notifications.clear();
-            for (const n of mapped) {
-              await db.notifications.put(n);
-            }
-            return;
-          }
-        } catch (err) {
-          console.error(err);
-        }
-      }
-
-      const local = await db.notifications.toArray();
-      set({ notifications: local });
+      const notifications = await offlineFetch<LocalNotification>({
+        table: db.notifications,
+        apiPath: '/notifications',
+        responseKey: 'notifications',
+        isOnline
+      });
+      set({ notifications });
     },
 
     markNotificationRead: async (id) => {
