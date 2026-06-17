@@ -108,6 +108,7 @@ export const createExpense = async (req: AuthenticatedRequest, res: Response, ne
     });
 
     // Synchronize budgets and credit card balances (non-fatal: expense is already persisted)
+    const warnings: string[] = [];
     try {
       await syncBudgetAndNotify(userId, newExpense.category, newExpense.date);
       if (newExpense.paymentMethod === 'credit_card' && newExpense.creditCardId) {
@@ -115,9 +116,10 @@ export const createExpense = async (req: AuthenticatedRequest, res: Response, ne
       }
     } catch (syncErr) {
       logger.error('[createExpense] Post-creation sync failed (expense was saved)', syncErr);
+      warnings.push('Budget/card balance sync failed. Totals will reconcile on next successful operation.');
     }
 
-    res.status(201).json({ success: true, expense: newExpense });
+    res.status(201).json({ success: true, expense: newExpense, ...(warnings.length && { warnings }) });
   } catch (error) {
     next(error);
   }
@@ -190,6 +192,7 @@ export const updateExpense = async (req: AuthenticatedRequest, res: Response, ne
     const updatedExpense = await expense.save();
 
     // Sync old budget parameters and new budget parameters (non-fatal)
+    const warnings: string[] = [];
     try {
       await syncBudgetAndNotify(userId, oldCategory, oldDate);
       if (updatedExpense.category !== oldCategory || updatedExpense.date.getMonth() !== oldDate.getMonth() || updatedExpense.date.getFullYear() !== oldDate.getFullYear()) {
@@ -205,9 +208,10 @@ export const updateExpense = async (req: AuthenticatedRequest, res: Response, ne
       }
     } catch (syncErr) {
       logger.error('[updateExpense] Post-update sync failed (expense was saved)', syncErr);
+      warnings.push('Budget/card balance sync failed. Totals will reconcile on next successful operation.');
     }
 
-    res.status(200).json({ success: true, expense: updatedExpense });
+    res.status(200).json({ success: true, expense: updatedExpense, ...(warnings.length && { warnings }) });
   } catch (error) {
     next(error);
   }
@@ -225,6 +229,7 @@ export const deleteExpense = async (req: AuthenticatedRequest, res: Response, ne
     }
 
     // Sync budget and credit card balance (non-fatal)
+    const warnings: string[] = [];
     try {
       await syncBudgetAndNotify(userId, expense.category, expense.date);
       if (expense.paymentMethod === 'credit_card' && expense.creditCardId) {
@@ -232,9 +237,10 @@ export const deleteExpense = async (req: AuthenticatedRequest, res: Response, ne
       }
     } catch (syncErr) {
       logger.error('[deleteExpense] Post-delete sync failed (expense was deleted)', syncErr);
+      warnings.push('Budget/card balance sync failed. Totals will reconcile on next successful operation.');
     }
 
-    res.status(200).json({ success: true, message: 'Expense deleted successfully' });
+    res.status(200).json({ success: true, message: 'Expense deleted successfully', ...(warnings.length && { warnings }) });
   } catch (error) {
     next(error);
   }
