@@ -1,5 +1,4 @@
 import { Request, Response, NextFunction } from 'express';
-import { ZodError } from 'zod';
 import { logger } from '../utils/logger';
 
 export const errorHandler = (
@@ -11,17 +10,6 @@ export const errorHandler = (
   let statusCode = res.statusCode === 200 ? 500 : res.statusCode;
   let message = err.message || 'Internal Server Error';
   let errors: any = undefined;
-
-  // Handle Zod validation errors (thrown by schema.parse() in controllers)
-  if (err instanceof ZodError) {
-    statusCode = 400;
-    message = 'Validation Error';
-    errors = err.errors.reduce((acc: any, e) => {
-      const field = e.path.join('.');
-      acc[field || 'input'] = e.message;
-      return acc;
-    }, {});
-  }
 
   // Handle mongoose validation errors
   if (err.name === 'ValidationError') {
@@ -72,6 +60,7 @@ export const errorHandler = (
   res.status(statusCode).json({
     success: false,
     message,
-    errors
+    errors,
+    stack: process.env.NODE_ENV === 'production' ? undefined : err.stack
   });
 };
