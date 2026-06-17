@@ -53,8 +53,8 @@ export async function offlineCreate<T extends { id?: string; _id?: string; isOff
         await table.add(saved);
         return { success: true, record: saved };
       }
-    } catch {
-      // Fall through to queue
+    } catch (err) {
+      console.error(`[offlineCreate] Online ${type} create failed, queuing for sync:`, err);
     }
   }
 
@@ -98,8 +98,8 @@ export async function offlineEdit<T extends { id?: string; _id?: string }>({
     try {
       await api.put(`${apiPath}/${id}`, updates);
       return { success: true, record: updated };
-    } catch {
-      // Fall through to queue
+    } catch (err) {
+      console.error(`[offlineEdit] Online ${type} update failed for ${id}, queuing for sync:`, err);
     }
   }
 
@@ -140,8 +140,8 @@ export async function offlineDelete<T>({
     try {
       await api.delete(`${apiPath}/${id}`);
       return true;
-    } catch {
-      // Fall through to queue
+    } catch (err) {
+      console.error(`[offlineDelete] Online ${type} delete failed for ${id}, queuing for sync:`, err);
     }
   }
 
@@ -187,8 +187,8 @@ export async function offlineFetch<T extends { _id?: string; id?: string }>({
         }
         return mapped;
       }
-    } catch {
-      // Fall through to local
+    } catch (err) {
+      console.error(`[offlineFetch] Online fetch from ${apiPath} failed, falling back to local cache:`, err);
     }
   }
 

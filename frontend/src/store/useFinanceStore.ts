@@ -164,10 +164,17 @@ export const useFinanceStore = create<FinanceState>((set, get) => {
           if (item.id !== undefined) {
             await db.syncQueue.delete(item.id);
           }
-        } catch (err) {
-          console.error(`Failed to sync item ${item.id} of type ${item.type}:`, err);
-          // Stop sync loop to prevent out-of-order execution, try again later
-          break;
+        } catch (err: any) {
+          const status = err?.response?.status;
+          if (status && status >= 400 && status < 500) {
+            console.error(`[syncOfflineData] Permanently failed to sync item ${item.id} (${item.type}/${item.action}): server returned ${status}. Removing from queue.`, err);
+            if (item.id !== undefined) {
+              await db.syncQueue.delete(item.id);
+            }
+          } else {
+            console.error(`[syncOfflineData] Transient failure syncing item ${item.id} (${item.type}/${item.action}). Will retry later.`, err);
+            break;
+          }
         }
       }
 
@@ -396,7 +403,7 @@ export const useFinanceStore = create<FinanceState>((set, get) => {
             return true;
           }
         } catch (err) {
-          console.log('Online save failed, queued in offline sync queue.');
+          console.error('[addExpense] Online save failed, queued for offline sync:', err);
         }
       }
 
@@ -434,7 +441,7 @@ export const useFinanceStore = create<FinanceState>((set, get) => {
             return true;
           }
         } catch (err) {
-          console.log('Online edit failed, queued locally.');
+          console.error('[editExpense] Online update failed, queued for offline sync:', err);
         }
       }
 
@@ -497,7 +504,7 @@ export const useFinanceStore = create<FinanceState>((set, get) => {
             return true;
           }
         } catch (err) {
-          console.log('Online delete failed, queued locally.');
+          console.error('[deleteExpense] Online delete failed, queued for offline sync:', err);
         }
       }
 
@@ -636,7 +643,7 @@ export const useFinanceStore = create<FinanceState>((set, get) => {
             return;
           }
         } catch (err) {
-          console.error(err);
+          console.error('[fetchBudgets] Online fetch failed, falling back to local cache:', err);
         }
       }
 
@@ -679,7 +686,7 @@ export const useFinanceStore = create<FinanceState>((set, get) => {
             return true;
           }
         } catch (err) {
-          console.log(err);
+          console.error('[createOrUpdateBudget] Online save failed, queued for offline sync:', err);
         }
       }
 
@@ -793,7 +800,7 @@ export const useFinanceStore = create<FinanceState>((set, get) => {
             return true;
           }
         } catch (err) {
-          console.log(err);
+          console.error('[addFundsToGoal] Online update failed, queued for offline sync:', err);
         }
       }
 
@@ -836,7 +843,7 @@ export const useFinanceStore = create<FinanceState>((set, get) => {
           await api.put(`/notifications/${notifId}/read`);
           return true;
         } catch (err) {
-          console.error(err);
+          console.error('[markNotificationRead] Online update failed:', err);
         }
       }
 
@@ -857,7 +864,7 @@ export const useFinanceStore = create<FinanceState>((set, get) => {
           await api.post('/notifications/read-all');
           return true;
         } catch (err) {
-          console.error(err);
+          console.error('[markAllNotificationsRead] Online update failed:', err);
         }
       }
       return true;
@@ -872,7 +879,7 @@ export const useFinanceStore = create<FinanceState>((set, get) => {
           await api.delete('/notifications/clear');
           return true;
         } catch (err) {
-          console.error(err);
+          console.error('[clearNotifications] Online delete failed:', err);
         }
       }
       return true;

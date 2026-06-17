@@ -1,4 +1,5 @@
 import crypto from 'crypto';
+import { logger } from './logger';
 
 const ALGORITHM = 'aes-256-cbc';
 const IV_LENGTH = 16;
@@ -32,7 +33,8 @@ export const decrypt = (text: string): string => {
     let decrypted = decipher.update(encryptedText);
     decrypted = Buffer.concat([decrypted, decipher.final()]);
     return decrypted.toString();
-  } catch {
+  } catch (error) {
+    logger.error('[Crypto] Decryption failed', error);
     return '';
   }
 };

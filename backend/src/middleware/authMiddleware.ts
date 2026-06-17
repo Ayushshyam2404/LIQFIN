@@ -1,5 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
+import { logger } from '../utils/logger';
 
 export interface AuthenticatedRequest extends Request {
   user?: {
@@ -42,7 +43,7 @@ export const protect = async (
     
     next();
   } catch (error) {
-    console.error('JWT Token Verification Error:', error);
+    logger.error('[authMiddleware] JWT token verification failed', error);
     res.status(401).json({ success: false, message: 'Not authorized, token invalid or expired' });
   }
 };

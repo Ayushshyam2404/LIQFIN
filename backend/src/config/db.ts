@@ -1,9 +1,10 @@
 import mongoose from 'mongoose';
+import { logger } from '../utils/logger';
 
 export const connectDB = async (): Promise<void> => {
   try {
     const connString = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/liquid-finance';
-    console.log(`Connecting to MongoDB at: ${connString.replace(/:([^:@]+)@/, ':****@')}`);
+    logger.info(`Connecting to MongoDB at: ${connString.replace(/:([^:@]+)@/, ':****@')}`);
     
     // Enterprise-grade Mongoose Connection Pooling and Resilience Options
     await mongoose.connect(connString, {
@@ -13,9 +14,9 @@ export const connectDB = async (): Promise<void> => {
       serverSelectionTimeoutMS: 5000,   // Fail fast if database is unreachable (5 seconds)
       heartbeatFrequencyMS: 10000        // Keep connections alive with a heartbeat every 10 seconds
     });
-    console.log('MongoDB Connected successfully.');
+    logger.info('MongoDB Connected successfully.');
   } catch (error: any) {
-    console.error(`MongoDB Connection Error: ${error.message}`);
+    logger.error(`MongoDB Connection Error: ${error.message}`, error);
     process.exit(1);
   }
 };
