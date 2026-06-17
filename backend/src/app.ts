@@ -54,17 +54,15 @@ app.use(cors({
   credentials: true
 }));
 
-// Rate Limiting to protect endpoints (Production only for general API)
-if (process.env.NODE_ENV !== 'development') {
-  const limiter = rateLimit({
-    windowMs: 15 * 60 * 1000, // 15 minutes
-    max: 1000, // Limit each IP to 1000 requests per window
-    message: { success: false, message: 'Too many requests, please try again later.' },
-    standardHeaders: true,
-    legacyHeaders: false
-  });
-  app.use(limiter);
-}
+// Rate Limiting to protect endpoints
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 1000, // Limit each IP to 1000 requests per window
+  message: { success: false, message: 'Too many requests, please try again later.' },
+  standardHeaders: true,
+  legacyHeaders: false
+});
+app.use(limiter);
 
 // Strict Auth Route Rate Limiting (always enabled)
 const authLimiter = rateLimit({

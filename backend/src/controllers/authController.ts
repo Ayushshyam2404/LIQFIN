@@ -1,8 +1,9 @@
 import { Request, Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
 import { User } from '../models/User';
-import { registerSchema, loginSchema } from '../validators';
+import { registerSchema, loginSchema, updateProfileSchema } from '../validators';
 import { AuthenticatedRequest } from '../middleware/authMiddleware';
+import crypto from 'crypto';
 import { encrypt, decrypt } from '../utils/crypto';
 import { syncEmailsForUser } from '../utils/emailSyncService';
 import { ImapFlow } from 'imapflow';
@@ -170,7 +171,7 @@ export const getBiometricRegisterOptions = async (req: AuthenticatedRequest, res
     }
 
     // Standard WebAuthn registration options payload
-    const challenge = 'random_cryptographic_challenge_bytes_liquid_finance_12345';
+    const challenge = crypto.randomBytes(32).toString('base64url');
     res.status(200).json({
       success: true,
       challenge,
@@ -244,7 +245,7 @@ export const getBiometricLoginOptions = async (req: Request, res: Response, next
       return;
     }
 
-    const challenge = 'random_cryptographic_login_challenge_bytes_liquid_finance_54321';
+    const challenge = crypto.randomBytes(32).toString('base64url');
     res.status(200).json({
       success: true,
       challenge,
@@ -468,13 +469,15 @@ export const updateProfile = async (req: AuthenticatedRequest, res: Response, ne
       return;
     }
 
-    const { name, email, age, occupation, phone, avatar, password } = req.body;
+    const validated = updateProfileSchema.parse(req.body);
 
     const user = await User.findById(userId);
     if (!user) {
       res.status(404).json({ success: false, message: 'User not found' });
       return;
     }
+
+    const { name, email, age, occupation, phone, avatar, password } = validated;
 
     if (name) user.name = name;
     
@@ -487,7 +490,7 @@ export const updateProfile = async (req: AuthenticatedRequest, res: Response, ne
       user.email = email.toLowerCase();
     }
 
-    if (age !== undefined) user.age = age === '' ? undefined : Number(age);
+    if (age !== undefined) user.age = (age === '' || age === null) ? undefined : Number(age);
     if (occupation !== undefined) user.occupation = occupation;
     if (phone !== undefined) user.phone = phone;
     if (avatar !== undefined) user.avatar = avatar;
