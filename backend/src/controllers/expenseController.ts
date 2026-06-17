@@ -128,10 +128,11 @@ export const getExpenses = async (req: AuthenticatedRequest, res: Response, next
     if (category) filter.category = category;
     if (paymentMethod) filter.paymentMethod = paymentMethod;
     if (search) {
+      const escaped = search.toString().replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
       filter.$or = [
-        { title: { $regex: search.toString(), $options: 'i' } },
-        { notes: { $regex: search.toString(), $options: 'i' } },
-        { tags: { $in: [new RegExp(search.toString(), 'i')] } }
+        { title: { $regex: escaped, $options: 'i' } },
+        { notes: { $regex: escaped, $options: 'i' } },
+        { tags: { $in: [new RegExp(escaped, 'i')] } }
       ];
     }
 
@@ -325,6 +326,18 @@ export const uploadReceipt = async (req: AuthenticatedRequest, res: Response, ne
 
 export const handleEmailWebhook = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
   try {
+    const webhookSecret = process.env.EMAIL_WEBHOOK_SECRET;
+    if (!webhookSecret) {
+      res.status(503).json({ success: false, message: 'Webhook not configured' });
+      return;
+    }
+
+    const authHeader = req.headers['x-webhook-secret'] || req.headers.authorization;
+    if (!authHeader || authHeader !== webhookSecret) {
+      res.status(401).json({ success: false, message: 'Unauthorized' });
+      return;
+    }
+
     const { emailContent } = req.body;
     if (!emailContent) {
       res.status(400).json({ success: false, message: 'emailContent is required' });

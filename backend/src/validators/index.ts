@@ -52,6 +52,16 @@ export const goalSchema = z.object({
   deadline: z.string().or(z.date())
 });
 
+export const updateProfileSchema = z.object({
+  name: z.string().min(2, 'Name must be at least 2 characters').optional(),
+  email: z.string().email('Please enter a valid email').optional(),
+  age: z.union([z.number().int().positive(), z.literal(''), z.null()]).optional(),
+  occupation: z.string().max(100).optional(),
+  phone: z.string().max(20).optional(),
+  avatar: z.string().url().optional(),
+  password: z.string().min(6, 'Password must be at least 6 characters').optional()
+});
+
 export const recurringSchema = z.object({
   title: z.string().min(1, 'Title is required'),
   amount: z.number().positive('Amount must be greater than zero'),

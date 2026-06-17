@@ -21,8 +21,9 @@ services:
     environment:
       - PORT=5001
       - MONGODB_URI=mongodb://mongodb:27017/liquid-finance
-      - JWT_SECRET=liquid_finance_super_secret_access_token_key_12345!
-      - JWT_REFRESH_SECRET=liquid_finance_super_secret_refresh_token_key_54321!
+      - JWT_SECRET=${JWT_SECRET:?Set JWT_SECRET in .env}
+      - JWT_REFRESH_SECRET=${JWT_REFRESH_SECRET:?Set JWT_REFRESH_SECRET in .env}
+      - ENCRYPTION_KEY=${ENCRYPTION_KEY:?Set ENCRYPTION_KEY in .env}
       - JWT_ACCESS_EXPIRY=15m
       - JWT_REFRESH_EXPIRY=7d
       - NODE_ENV=production
