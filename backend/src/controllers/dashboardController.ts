@@ -5,51 +5,32 @@ import { CreditCard } from '../models/CreditCard';
 import { Goal } from '../models/Goal';
 import { Budget } from '../models/Budget';
 import { AuthenticatedRequest } from '../middleware/authMiddleware';
+import { getStartOfMonth, getEndOfMonth } from '../utils/dateHelpers';
+import { sumExpenses } from '../utils/aggregateHelpers';
 
 export const getDashboardStats = async (req: AuthenticatedRequest, res: Response, next: NextFunction): Promise<void> => {
   try {
     const userId = req.user!.id;
     const now = new Date();
-    const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1);
-    const endOfMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0, 23, 59, 59);
+    const startOfMonth = getStartOfMonth(now);
+    const endOfMonth = getEndOfMonth(now);
 
     const userObjectId = new Types.ObjectId(userId);
 
     // 1. Total Monthly Expenses
-    const currentMonthExpensesAgg = await Expense.aggregate([
-      {
-        $match: {
-          userId: userObjectId,
-          date: { $gte: startOfMonth, $lte: endOfMonth }
-        }
-      },
-      {
-        $group: {
-          _id: null,
-          total: { $sum: '$amount' }
-        }
-      }
-    ]);
-    const monthlyExpenses = currentMonthExpensesAgg[0]?.total || 0;
+    const monthlyExpenses = await sumExpenses({
+      userId: userObjectId,
+      dateRange: { start: startOfMonth, end: endOfMonth }
+    });
 
     // 2. Previous Month Expenses for Trend Comparison
-    const startOfPrevMonth = new Date(now.getFullYear(), now.getMonth() - 1, 1);
-    const endOfPrevMonth = new Date(now.getFullYear(), now.getMonth(), 0, 23, 59, 59);
-    const prevMonthExpensesAgg = await Expense.aggregate([
-      {
-        $match: {
-          userId: userObjectId,
-          date: { $gte: startOfPrevMonth, $lte: endOfPrevMonth }
-        }
-      },
-      {
-        $group: {
-          _id: null,
-          total: { $sum: '$amount' }
-        }
-      }
-    ]);
-    const prevMonthlyExpenses = prevMonthExpensesAgg[0]?.total || 0;
+    const prevMonth = new Date(now.getFullYear(), now.getMonth() - 1, 1);
+    const startOfPrevMonth = getStartOfMonth(prevMonth);
+    const endOfPrevMonth = getEndOfMonth(prevMonth);
+    const prevMonthlyExpenses = await sumExpenses({
+      userId: userObjectId,
+      dateRange: { start: startOfPrevMonth, end: endOfPrevMonth }
+    });
 
     // 3. Credit Cards Aggregations (Balances and Limits)
     const cards = await CreditCard.find({ userId: userObjectId });

@@ -5,6 +5,7 @@ import { z } from 'zod';
 import { X, Upload, Sparkles, Loader2, Camera } from 'lucide-react';
 import { useFinanceStore } from '../../store/useFinanceStore';
 import { useSettingsStore } from '../../store/useSettingsStore';
+import { EXPENSE_CATEGORIES } from '../../constants/categories';
 
 const expenseFormSchema = z.object({
   title: z.string().min(1, 'Title is required'),
@@ -32,11 +33,7 @@ export const AddExpenseModal: React.FC<AddExpenseModalProps> = ({ isOpen, onClos
   const [scanMessage, setScanMessage] = useState('');
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
 
-  const categories = [
-    'Food', 'Groceries', 'Travel', 'Transportation', 'Entertainment', 
-    'Shopping', 'Bills', 'Healthcare', 'Education', 'Rent', 'Utilities', 
-    'Investments', 'Miscellaneous'
-  ];
+  const categories = EXPENSE_CATEGORIES;
 
   const paymentMethods = [
     { value: 'cash', label: 'Cash' },

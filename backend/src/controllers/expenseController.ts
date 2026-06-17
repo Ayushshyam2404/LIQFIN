@@ -8,37 +8,28 @@ import { User } from '../models/User';
 import { expenseSchema } from '../validators';
 import { AuthenticatedRequest } from '../middleware/authMiddleware';
 import { parseTransactionEmail } from '../utils/emailParser';
+import { toYearMonth, getStartOfMonth, getEndOfMonth } from '../utils/dateHelpers';
+import { sumExpenses, calculateCardBalance } from '../utils/aggregateHelpers';
 
 // Utility helper to update budget and alert user if limit exceeded
 export const syncBudgetAndNotify = async (userId: string, category: string, date: Date) => {
-  const yearMonth = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`;
-  
-  // Calculate total spent for this category in this month
-  const startOfMonth = new Date(date.getFullYear(), date.getMonth(), 1);
-  const endOfMonth = new Date(date.getFullYear(), date.getMonth() + 1, 0, 23, 59, 59);
-
-  // Match category or 'all'
-  const filter: any = {
-    userId: new Types.ObjectId(userId),
-    date: { $gte: startOfMonth, $lte: endOfMonth }
-  };
+  const yearMonth = toYearMonth(date);
+  const startOfMonth = getStartOfMonth(date);
+  const endOfMonth = getEndOfMonth(date);
+  const userObjectId = new Types.ObjectId(userId);
+  const dateRange = { start: startOfMonth, end: endOfMonth };
 
   // 1. Update Specific Category Budget
-  const categorySpentAggregate = await Expense.aggregate([
-    { $match: { ...filter, category } },
-    { $group: { _id: null, total: { $sum: '$amount' } } }
-  ]);
-  const newCategorySpent = categorySpentAggregate[0]?.total || 0;
+  const newCategorySpent = await sumExpenses({ userId: userObjectId, dateRange, category });
 
-  const categoryBudget = await Budget.findOne({ userId: new Types.ObjectId(userId), category, month: yearMonth });
+  const categoryBudget = await Budget.findOne({ userId: userObjectId, category, month: yearMonth });
   if (categoryBudget) {
     categoryBudget.spent = newCategorySpent;
     await categoryBudget.save();
 
-    // Send warning notification if overspent
     if (categoryBudget.spent > categoryBudget.limit) {
       await Notification.create({
-        userId: new Types.ObjectId(userId),
+        userId: userObjectId,
         title: 'Budget Limit Exceeded',
         message: `You have spent $${categoryBudget.spent.toFixed(2)} on "${category}" which exceeds your limit of $${categoryBudget.limit.toFixed(2)} for ${yearMonth}.`,
         type: 'warning'
@@ -47,20 +38,16 @@ export const syncBudgetAndNotify = async (userId: string, category: string, date
   }
 
   // 2. Update 'All' (Total Monthly) Budget
-  const totalSpentAggregate = await Expense.aggregate([
-    { $match: filter },
-    { $group: { _id: null, total: { $sum: '$amount' } } }
-  ]);
-  const newTotalSpent = totalSpentAggregate[0]?.total || 0;
+  const newTotalSpent = await sumExpenses({ userId: userObjectId, dateRange });
 
-  const totalBudget = await Budget.findOne({ userId: new Types.ObjectId(userId), category: 'all', month: yearMonth });
+  const totalBudget = await Budget.findOne({ userId: userObjectId, category: 'all', month: yearMonth });
   if (totalBudget) {
     totalBudget.spent = newTotalSpent;
     await totalBudget.save();
 
     if (totalBudget.spent > totalBudget.limit) {
       await Notification.create({
-        userId: new Types.ObjectId(userId),
+        userId: userObjectId,
         title: 'Monthly Budget Limit Exceeded',
         message: `Your total monthly spend of $${totalBudget.spent.toFixed(2)} exceeds your total budget of $${totalBudget.limit.toFixed(2)} for ${yearMonth}.`,
         type: 'danger'
@@ -73,19 +60,10 @@ export const syncBudgetAndNotify = async (userId: string, category: string, date
 export const syncCreditCardBalance = async (cardId: string | null | undefined, userId: string) => {
   if (!cardId) return;
 
-  const totalCardSpentAggregate = await Expense.aggregate([
-    {
-      $match: {
-        userId: new Types.ObjectId(userId),
-        paymentMethod: 'credit_card',
-        creditCardId: new Types.ObjectId(cardId)
-      }
-    },
-    { $group: { _id: null, total: { $sum: '$amount' } } }
-  ]);
+  const userObjectId = new Types.ObjectId(userId);
+  const cardObjectId = new Types.ObjectId(cardId);
+  const newBalance = await calculateCardBalance(userObjectId, cardObjectId);
 
-  const newBalance = totalCardSpentAggregate[0]?.total || 0;
-  
   const card = await CreditCard.findById(cardId);
   if (card) {
     card.currentBalance = newBalance;
@@ -95,7 +73,7 @@ export const syncCreditCardBalance = async (cardId: string | null | undefined, u
     const utilizationRate = (card.currentBalance / card.creditLimit) * 100;
     if (utilizationRate >= 80) {
       await Notification.create({
-        userId: new Types.ObjectId(userId),
+        userId: userObjectId,
         title: 'High Credit Card Utilization',
         message: `Your credit card "${card.cardName}" has reached ${utilizationRate.toFixed(1)}% utilization ($${card.currentBalance.toFixed(2)} / $${card.creditLimit.toFixed(2)}).`,
         type: 'warning'

@@ -14,6 +14,7 @@ import { useFinanceStore } from '../store/useFinanceStore';
 import { useSettingsStore } from '../store/useSettingsStore';
 import { TableSkeleton } from '../components/ui/Loading';
 import { EmptyState } from '../components/ui/EmptyState';
+import { EXPENSE_CATEGORIES } from '../constants/categories';
 
 interface ExpensesPageProps {
   onOpenAddExpense: () => void;
@@ -36,11 +37,7 @@ export const ExpensesPage: React.FC<ExpensesPageProps> = ({ onOpenAddExpense, on
     fetchExpenses({ search, category, paymentMethod });
   }, [search, category, paymentMethod]);
 
-  const categories = [
-    'Food', 'Groceries', 'Travel', 'Transportation', 'Entertainment', 
-    'Shopping', 'Utilities', 'Bills', 'Rent', 'Salary', 'Freelance', 
-    'Investments', 'Miscellaneous'
-  ];
+  const categories = EXPENSE_CATEGORIES;
 
   const sortedExpenses = [...expenses].sort((a, b) => {
     const fieldA = sortField === 'date' ? new Date(a.date).getTime() : a.amount;
