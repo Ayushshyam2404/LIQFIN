@@ -7,6 +7,7 @@ import crypto from 'crypto';
 import { encrypt, decrypt } from '../utils/crypto';
 import { syncEmailsForUser } from '../utils/emailSyncService';
 import { ImapFlow } from 'imapflow';
+import { logger } from '../utils/logger';
 
 const generateTokens = (id: string, email: string) => {
   const accessToken = jwt.sign(
@@ -144,6 +145,7 @@ export const refresh = async (req: Request, res: Response): Promise<void> => {
       accessToken: tokens.accessToken
     });
   } catch (error) {
+    logger.error('[refresh] Token verification failed', error);
     res.status(401).json({ success: false, message: 'Invalid or expired refresh token' });
   }
 };

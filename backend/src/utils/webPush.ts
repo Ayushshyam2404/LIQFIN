@@ -29,7 +29,12 @@ if (vapidKeys.publicKey && vapidKeys.privateKey) {
   );
 }
 
-export const getVapidPublicKey = () => vapidKeys.publicKey;
+export const getVapidPublicKey = () => {
+  if (!vapidKeys.publicKey) {
+    logger.warn('[webPush] VAPID public key is not available — push notifications will not work');
+  }
+  return vapidKeys.publicKey;
+};
 
 export const sendPushNotification = async (
   userId: string,

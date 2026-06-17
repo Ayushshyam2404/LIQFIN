@@ -10,6 +10,7 @@ import { AuthenticatedRequest } from '../middleware/authMiddleware';
 import { parseTransactionEmail } from '../utils/emailParser';
 import { toYearMonth, getStartOfMonth, getEndOfMonth } from '../utils/dateHelpers';
 import { sumExpenses, calculateCardBalance } from '../utils/aggregateHelpers';
+import { logger } from '../utils/logger';
 
 // Utility helper to update budget and alert user if limit exceeded
 export const syncBudgetAndNotify = async (userId: string, category: string, date: Date) => {
@@ -106,10 +107,14 @@ export const createExpense = async (req: AuthenticatedRequest, res: Response, ne
       tags: validated.tags || []
     });
 
-    // Synchronize budgets and credit card balances
-    await syncBudgetAndNotify(userId, newExpense.category, newExpense.date);
-    if (newExpense.paymentMethod === 'credit_card' && newExpense.creditCardId) {
-      await syncCreditCardBalance(newExpense.creditCardId.toString(), userId);
+    // Synchronize budgets and credit card balances (non-fatal: expense is already persisted)
+    try {
+      await syncBudgetAndNotify(userId, newExpense.category, newExpense.date);
+      if (newExpense.paymentMethod === 'credit_card' && newExpense.creditCardId) {
+        await syncCreditCardBalance(newExpense.creditCardId.toString(), userId);
+      }
+    } catch (syncErr) {
+      logger.error('[createExpense] Post-creation sync failed (expense was saved)', syncErr);
     }
 
     res.status(201).json({ success: true, expense: newExpense });
@@ -184,18 +189,22 @@ export const updateExpense = async (req: AuthenticatedRequest, res: Response, ne
 
     const updatedExpense = await expense.save();
 
-    // Sync old budget parameters and new budget parameters
-    await syncBudgetAndNotify(userId, oldCategory, oldDate);
-    if (updatedExpense.category !== oldCategory || updatedExpense.date.getMonth() !== oldDate.getMonth() || updatedExpense.date.getFullYear() !== oldDate.getFullYear()) {
-      await syncBudgetAndNotify(userId, updatedExpense.category, updatedExpense.date);
-    }
+    // Sync old budget parameters and new budget parameters (non-fatal)
+    try {
+      await syncBudgetAndNotify(userId, oldCategory, oldDate);
+      if (updatedExpense.category !== oldCategory || updatedExpense.date.getMonth() !== oldDate.getMonth() || updatedExpense.date.getFullYear() !== oldDate.getFullYear()) {
+        await syncBudgetAndNotify(userId, updatedExpense.category, updatedExpense.date);
+      }
 
-    // Sync credit card balances
-    if (oldPaymentMethod === 'credit_card' && oldCardId) {
-      await syncCreditCardBalance(oldCardId, userId);
-    }
-    if (updatedExpense.paymentMethod === 'credit_card' && updatedExpense.creditCardId) {
-      await syncCreditCardBalance(updatedExpense.creditCardId.toString(), userId);
+      // Sync credit card balances
+      if (oldPaymentMethod === 'credit_card' && oldCardId) {
+        await syncCreditCardBalance(oldCardId, userId);
+      }
+      if (updatedExpense.paymentMethod === 'credit_card' && updatedExpense.creditCardId) {
+        await syncCreditCardBalance(updatedExpense.creditCardId.toString(), userId);
+      }
+    } catch (syncErr) {
+      logger.error('[updateExpense] Post-update sync failed (expense was saved)', syncErr);
     }
 
     res.status(200).json({ success: true, expense: updatedExpense });
@@ -215,10 +224,14 @@ export const deleteExpense = async (req: AuthenticatedRequest, res: Response, ne
       return;
     }
 
-    // Sync budget and credit card balance
-    await syncBudgetAndNotify(userId, expense.category, expense.date);
-    if (expense.paymentMethod === 'credit_card' && expense.creditCardId) {
-      await syncCreditCardBalance(expense.creditCardId.toString(), userId);
+    // Sync budget and credit card balance (non-fatal)
+    try {
+      await syncBudgetAndNotify(userId, expense.category, expense.date);
+      if (expense.paymentMethod === 'credit_card' && expense.creditCardId) {
+        await syncCreditCardBalance(expense.creditCardId.toString(), userId);
+      }
+    } catch (syncErr) {
+      logger.error('[deleteExpense] Post-delete sync failed (expense was deleted)', syncErr);
     }
 
     res.status(200).json({ success: true, message: 'Expense deleted successfully' });
@@ -244,11 +257,15 @@ export const bulkDeleteExpenses = async (req: AuthenticatedRequest, res: Respons
 
     await Expense.deleteMany({ _id: { $in: objectIds }, userId });
 
-    // Sync budget limits and cards for all deleted items
+    // Sync budget limits and cards for all deleted items (non-fatal)
     for (const exp of affectedExpenses) {
-      await syncBudgetAndNotify(userId, exp.category, exp.date);
-      if (exp.paymentMethod === 'credit_card' && exp.creditCardId) {
-        await syncCreditCardBalance(exp.creditCardId.toString(), userId);
+      try {
+        await syncBudgetAndNotify(userId, exp.category, exp.date);
+        if (exp.paymentMethod === 'credit_card' && exp.creditCardId) {
+          await syncCreditCardBalance(exp.creditCardId.toString(), userId);
+        }
+      } catch (syncErr) {
+        logger.error(`[bulkDeleteExpenses] Post-delete sync failed for expense ${exp._id}`, syncErr);
       }
     }
 
@@ -282,9 +299,13 @@ export const duplicateExpense = async (req: AuthenticatedRequest, res: Response,
       tags: expense.tags
     });
 
-    await syncBudgetAndNotify(userId, duplicated.category, duplicated.date);
-    if (duplicated.paymentMethod === 'credit_card' && duplicated.creditCardId) {
-      await syncCreditCardBalance(duplicated.creditCardId.toString(), userId);
+    try {
+      await syncBudgetAndNotify(userId, duplicated.category, duplicated.date);
+      if (duplicated.paymentMethod === 'credit_card' && duplicated.creditCardId) {
+        await syncCreditCardBalance(duplicated.creditCardId.toString(), userId);
+      }
+    } catch (syncErr) {
+      logger.error('[duplicateExpense] Post-duplication sync failed', syncErr);
     }
 
     res.status(201).json({ success: true, expense: duplicated });
@@ -392,9 +413,13 @@ export const handleEmailWebhook = async (req: Request, res: Response, next: Next
       tags: ['auto-parsed', 'email-webhook']
     });
 
-    // Synchronize budgets and credit card balances
-    await syncBudgetAndNotify(user._id.toString(), newExpense.category, newExpense.date);
-    await syncCreditCardBalance(card._id.toString(), user._id.toString());
+    // Synchronize budgets and credit card balances (non-fatal)
+    try {
+      await syncBudgetAndNotify(user._id.toString(), newExpense.category, newExpense.date);
+      await syncCreditCardBalance(card._id.toString(), user._id.toString());
+    } catch (syncErr) {
+      logger.error('[handleEmailWebhook] Post-creation sync failed', syncErr);
+    }
 
     // Create confirmation notification
     await Notification.create({
