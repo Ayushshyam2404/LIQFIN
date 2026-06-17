@@ -166,12 +166,21 @@ export const useFinanceStore = create<FinanceState>((set, get) => {
           }
         } catch (err: any) {
           const status = err?.response?.status;
+          // 401/403 are auth failures — recoverable after re-login, so break
+          // and preserve the queue for retry after re-authentication.
+          if (status === 401 || status === 403) {
+            console.error(`[syncOfflineData] Auth failure (${status}) syncing item ${item.id} (${item.type}/${item.action}). Preserving queue for retry after re-login.`);
+            break;
+          }
+          // Other 4xx errors (400, 404, 409, 422) are permanent validation/conflict
+          // failures that won't resolve on retry — discard the item.
           if (status && status >= 400 && status < 500) {
             console.error(`[syncOfflineData] Permanently failed to sync item ${item.id} (${item.type}/${item.action}): server returned ${status}. Removing from queue.`, err);
             if (item.id !== undefined) {
               await db.syncQueue.delete(item.id);
             }
           } else {
+            // 5xx or network errors — transient, break and retry later.
             console.error(`[syncOfflineData] Transient failure syncing item ${item.id} (${item.type}/${item.action}). Will retry later.`, err);
             break;
           }
